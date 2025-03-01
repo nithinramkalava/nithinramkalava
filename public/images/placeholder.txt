@@ -1,0 +1,7 @@
+This directory will contain the following images:
+- about.jpg (Nithin's profile photo for the about section preview)
+- about-full.jpg (Larger profile photo for the full about page)
+- projects/pc-building.jpg (Screenshot of PC Building Assistant Platform)
+- projects/post-quantum.jpg (Illustration for Post-Quantum Cryptography Package)
+- projects/math-minute.jpg (Screenshot of Math Minute Android app)
+- projects/london-bus.jpg (Visualization from London Bus Safety Analysis)

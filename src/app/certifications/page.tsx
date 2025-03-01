@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -6,8 +5,17 @@ export const metadata = {
   description: "Explore the professional certifications and credentials of Nithin Ram Kalava, showcasing expertise in Machine Learning, AI, Data Analytics, and more.",
 };
 
+// Define the type for certification
+interface Certification {
+  title: string;
+  organization: string;
+  period: string;
+  achievements: string[];
+  skills: string[];
+}
+
 export default function CertificationsPage() {
-  const certifications = [
+  const certifications: Certification[] = [
     {
       title: "Deep Learning Specialization",
       organization: "DeepLearning.AI",
@@ -70,8 +78,8 @@ export default function CertificationsPage() {
     }
   ];
 
-  // Timeline component
-  const CertificationItem = ({ certification, isLast }) => (
+  // Timeline component with proper type definitions
+  const CertificationItem = ({ certification, isLast }: { certification: Certification; isLast: boolean }) => (
     <div className="relative pb-12">
       {!isLast && (
         <div className="absolute left-6 top-5 h-full w-0.5 bg-primary/30" aria-hidden="true"></div>
@@ -305,8 +313,8 @@ export default function CertificationsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Ready to Collaborate?</h2>
           <p className="text-lg max-w-2xl mx-auto mb-8 text-white">
-            I'm always looking for exciting opportunities to apply my skills and experience. 
-            Let's discuss how I can contribute to your project.
+            I&apos;m always looking for exciting opportunities to apply my skills and experience. 
+            Let&apos;s discuss how I can contribute to your project.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/contact" className="btn bg-white text-gray-800 hover:bg-gray-200 hover:text-black">

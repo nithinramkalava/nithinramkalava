@@ -17,7 +17,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2">
               <p className="text-lg mb-6">
-                I'm a passionate Full Stack Developer with a strong background in web application development, 
+                I&apos;m a passionate Full Stack Developer with a strong background in web application development, 
                 data analytics, and a special interest in post-quantum cryptography.
               </p>
               <p className="text-lg mb-6">
@@ -184,9 +184,9 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Let's Work Together</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Let&apos;s Work Together</h2>
           <p className="text-lg max-w-2xl mx-auto mb-8 text-white">
-            I'm currently available for freelance work and exciting opportunities. 
+            I&apos;m currently available for freelance work and exciting opportunities. 
             If you have a project that needs my expertise, feel free to reach out.
           </p>
           <Link 

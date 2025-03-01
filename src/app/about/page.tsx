@@ -24,7 +24,7 @@ export default function AboutPage() {
             <div className="md:w-1/2 order-2 md:order-1">
               <h2 className="text-2xl font-bold mb-4">Who I Am</h2>
               <p className="mb-4">
-                I'm Nithin Ram Kalava, a Full Stack Developer with a passion for building innovative and user-friendly web applications. My journey in tech began during my Computer Science studies, where I discovered my love for creating solutions that solve real-world problems.
+                I&apos;m Nithin Ram Kalava, a Full Stack Developer with a passion for building innovative and user-friendly web applications. My journey in tech began during my Computer Science studies, where I discovered my love for creating solutions that solve real-world problems.
               </p>
               <p className="mb-4">
                 With a strong foundation in both front-end and back-end technologies, I specialize in building complete web applications from the ground up. My expertise extends to data analytics and post-quantum cryptography, fields that I find particularly fascinating.
@@ -207,7 +207,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Interested in working together?</h2>
           <p className="text-lg max-w-2xl mx-auto mb-8 text-white">
-            I'm always open to discussing product design work or partnership opportunities.
+            I&apos;m always open to discussing product design work or partnership opportunities.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/projects" className="btn bg-white text-gray-800 hover:bg-gray-200 hover:text-black">

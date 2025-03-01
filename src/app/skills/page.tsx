@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -6,8 +5,21 @@ export const metadata = {
   description: "Explore the technical skills and expertise of Nithin Ram Kalava, a Full Stack Developer specialized in web development, data analytics, and cryptography.",
 };
 
+// Define the Skill interface
+interface Skill {
+  name: string;
+  level: number;
+}
+
 export default function SkillsPage() {
-  const skills = {
+  const skills: {
+    frontend: Skill[];
+    backend: Skill[];
+    database: Skill[];
+    devops: Skill[];
+    dataAnalytics: Skill[];
+    specialization: Skill[];
+  } = {
     frontend: [
       { name: "HTML5", level: 95 },
       { name: "CSS3/SCSS", level: 90 },
@@ -57,16 +69,16 @@ export default function SkillsPage() {
     ],
   };
 
-  // Function to determine color based on skill level
-  const getColorClass = (level) => {
+  // Function to determine color based on skill level with type definition
+  const getColorClass = (level: number): string => {
     if (level >= 90) return "bg-success";
     if (level >= 80) return "bg-primary";
     if (level >= 70) return "bg-warning";
     return "bg-secondary";
   };
 
-  // Render skill bar
-  const SkillBar = ({ name, level }) => (
+  // Render skill bar with type definitions
+  const SkillBar = ({ name, level }: Skill) => (
     <div className="mb-6">
       <div className="flex justify-between mb-1">
         <span className="font-medium">{name}</span>
@@ -301,7 +313,7 @@ export default function SkillsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Ready to Build Something Amazing?</h2>
           <p className="text-lg max-w-2xl mx-auto mb-8 text-white">
-            Now that you know what I can do, let's discuss how my skills can benefit your project.
+            Now that you know what I can do, let&apos;s discuss how my skills can benefit your project.
           </p>
           <Link 
             href="/contact" 

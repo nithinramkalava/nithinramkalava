@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 
 export default function Hero() {
@@ -8,14 +8,14 @@ export default function Hero() {
   const [isTyping, setIsTyping] = useState(true);
   const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
   
-  const phrases = [
+  const phrases = useMemo(() => [
     "Full Stack Developer",
     "Post-Quantum Cryptography Specialist",
     "Web Application Engineer",
     "Data Analytics Enthusiast",
     "UI/UX Designer",
     "Problem Solver"
-  ];
+  ], []);
   
   const typingSpeed = 72; // Slightly slower typing
   const erasingSpeed = 40; // Slightly slower erasing
@@ -68,7 +68,7 @@ export default function Hero() {
       {/* Content */}
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-primary font-medium mb-4 animate-[fadeIn_1s_ease-in]">Hello, I'm</p>
+          <p className="text-primary font-medium mb-4 animate-[fadeIn_1s_ease-in]">Hello, I&apos;m</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-[fadeIn_1.5s_ease-in]">
             Nithin Ram Kalava
           </h1>

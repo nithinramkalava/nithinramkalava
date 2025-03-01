@@ -1,13 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CSSProperties } from "react";
 
 export const metadata = {
   title: "Projects - Nithin Ram Kalava",
   description: "Explore the portfolio of projects by Nithin Ram Kalava, including web applications, software tools, and innovative solutions.",
 };
 
+// Define the Project interface
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  longDescription: string;
+  technologies: string[];
+  keyFeatures: string[];
+  image: string;
+  demoLink: string | null;
+  codeLink: string;
+}
+
 export default function ProjectsPage() {
-  const projects = [
+  const projects: Project[] = [
     {
       id: "pc-building",
       title: "PC Building Assistant Platform",
@@ -82,8 +96,8 @@ export default function ProjectsPage() {
     }
   ];
 
-  // Project component
-  const ProjectCard = ({ project }) => (
+  // Project component with type definition
+  const ProjectCard = ({ project }: { project: Project }) => (
     <div className="card flex flex-col h-full">
       <div className="relative w-full h-56 mb-4 rounded-lg overflow-hidden">
         <Image
@@ -137,12 +151,12 @@ export default function ProjectsPage() {
     </div>
   );
 
-  // Project Detail component
-  const ProjectDetail = ({ project }) => {
-    // Special handling for Math Minute image
-    const imageStyle = project.id === "math-minute" 
+  // Project Detail component with type definition
+  const ProjectDetail = ({ project }: { project: Project }) => {
+    // Special handling for Math Minute image with proper typing
+    const imageStyle: CSSProperties = project.id === "math-minute" 
       ? { 
-          objectFit: "cover", 
+          objectFit: "cover" as const, 
           objectPosition: "center",
           width: '100%',
           height: '100%',
@@ -239,7 +253,7 @@ export default function ProjectsPage() {
             <h1 className="text-4xl md:text-5xl font-bold mb-6">My Projects</h1>
             <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
             <p className="text-lg text-secondary max-w-3xl mx-auto">
-              Here are some of the projects I've worked on. Each project showcases different 
+              Here are some of the projects I&apos;ve worked on. Each project showcases different 
               skills and technologies from my toolkit.
             </p>
           </div>
@@ -268,7 +282,7 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Interested in Working Together?</h2>
           <p className="text-lg max-w-2xl mx-auto mb-8 text-white">
-            I'm always open to discussing product design work or partnership opportunities.
+            I&apos;m always open to discussing product design work or partnership opportunities.
           </p>
           <Link 
             href="/contact" 

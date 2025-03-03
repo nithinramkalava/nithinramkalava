@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
+import nodemailer from 'nodemailer';
 
 // Define the contact message type
 interface ContactMessage {
@@ -18,10 +19,18 @@ const GOOGLE_SHEET_ID = process.env.GOOGLE_SHEET_ID || '';
 const GOOGLE_SERVICE_ACCOUNT_EMAIL = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL || '';
 const GOOGLE_PRIVATE_KEY = process.env.GOOGLE_PRIVATE_KEY?.replace(/\\n/g, '\n') || '';
 
+// Email configuration
+const GMAIL_USER = process.env.GMAIL_USER || '';
+const GMAIL_PASSWORD = process.env.GMAIL_PASSWORD || '';
+const CONTACT_FORM_ADMIN_EMAIL = process.env.CONTACT_FORM_ADMIN_EMAIL || '';
+
 // Debug log for credentials
 console.log('Google Sheet ID:', GOOGLE_SHEET_ID ? 'Configured' : 'Missing');
 console.log('Google Service Account Email:', GOOGLE_SERVICE_ACCOUNT_EMAIL ? 'Configured' : 'Missing');
 console.log('Google Private Key:', GOOGLE_PRIVATE_KEY ? 'Configured (length: ' + GOOGLE_PRIVATE_KEY.length + ')' : 'Missing');
+console.log('Gmail User:', GMAIL_USER ? 'Configured' : 'Missing');
+console.log('Gmail Password:', GMAIL_PASSWORD ? 'Configured' : 'Missing');
+console.log('Admin Email:', CONTACT_FORM_ADMIN_EMAIL ? 'Configured' : 'Missing');
 
 export async function POST(request: NextRequest) {
   try {
@@ -51,6 +60,9 @@ export async function POST(request: NextRequest) {
     // Save to Google Sheet
     await saveToGoogleSheet(contactMessage);
     
+    // Send email notification
+    await sendEmailNotification(contactMessage);
+    
     return NextResponse.json(
       { success: true, message: 'Contact message saved successfully' },
       { status: 200 }
@@ -77,8 +89,17 @@ async function saveToLogFile(message: ContactMessage) {
   // Read existing messages or create empty array
   let messages: ContactMessage[] = [];
   if (fs.existsSync(logFile)) {
-    const data = fs.readFileSync(logFile, 'utf8');
-    messages = JSON.parse(data);
+    try {
+      const data = fs.readFileSync(logFile, 'utf8');
+      // Handle empty file case
+      if (data.trim()) {
+        messages = JSON.parse(data);
+      }
+    } catch (error) {
+      console.error('Error parsing log file:', error);
+      // If there's an error parsing the file, we'll start with an empty array
+      // and overwrite the corrupted file
+    }
   }
   
   // Add new message
@@ -134,5 +155,87 @@ async function saveToGoogleSheet(message: ContactMessage) {
   } catch (error) {
     console.error('Error saving to Google Sheet:', error);
     // Don't throw the error, just log it - we still want the local log to work
+  }
+}
+
+// Function to send email notification
+async function sendEmailNotification(message: ContactMessage) {
+  try {
+    // Skip if email credentials are not configured
+    if (!GMAIL_USER || !GMAIL_PASSWORD || !CONTACT_FORM_ADMIN_EMAIL) {
+      console.warn('Email credentials not configured. Skipping email notification.');
+      return;
+    }
+    
+    console.log('Attempting to send email notification...');
+    
+    // Create a transporter
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: GMAIL_USER,
+        pass: GMAIL_PASSWORD,
+      },
+      tls: {
+        rejectUnauthorized: false
+      }
+    });
+    
+    // Format the date for better readability
+    const formattedDate = new Date(message.timestamp).toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+    
+    // Email content
+    const mailOptions = {
+      from: `"Portfolio Contact Form" <${GMAIL_USER}>`,
+      to: CONTACT_FORM_ADMIN_EMAIL,
+      subject: `New Contact Form Submission: ${message.subject}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 5px;">
+          <h2 style="color: #333; border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">New Contact Form Submission</h2>
+          
+          <p><strong>Date:</strong> ${formattedDate}</p>
+          <p><strong>Name:</strong> ${message.name}</p>
+          <p><strong>Email:</strong> <a href="mailto:${message.email}">${message.email}</a></p>
+          <p><strong>Subject:</strong> ${message.subject}</p>
+          
+          <div style="background-color: #f9f9f9; padding: 15px; border-radius: 5px; margin-top: 15px;">
+            <h3 style="margin-top: 0; color: #555;">Message:</h3>
+            <p style="white-space: pre-line;">${message.message}</p>
+          </div>
+          
+          <div style="margin-top: 20px; font-size: 12px; color: #777; border-top: 1px solid #e0e0e0; padding-top: 10px;">
+            <p>This is an automated email from your portfolio website contact form.</p>
+          </div>
+        </div>
+      `,
+      text: `
+New Contact Form Submission
+
+Date: ${formattedDate}
+Name: ${message.name}
+Email: ${message.email}
+Subject: ${message.subject}
+
+Message:
+${message.message}
+
+This is an automated email from your portfolio website contact form.
+      `,
+    };
+    
+    // Send the email
+    const info = await transporter.sendMail(mailOptions);
+    console.log('Email notification sent:', info.messageId);
+    
+  } catch (error) {
+    console.error('Error sending email notification:', error);
+    // Don't throw the error, just log it - we still want the other methods to work
   }
 } 

@@ -32,6 +32,20 @@ console.log('Gmail User:', GMAIL_USER ? 'Configured' : 'Missing');
 console.log('Gmail Password:', GMAIL_PASSWORD ? 'Configured' : 'Missing');
 console.log('Admin Email:', CONTACT_FORM_ADMIN_EMAIL ? 'Configured' : 'Missing');
 
+// Function to format date in IST
+function formatDateToIST(date: Date): string {
+  return date.toLocaleString('en-US', {
+    timeZone: 'Asia/Kolkata',
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  });
+}
+
 export async function POST(request: NextRequest) {
   try {
     // Parse the request body
@@ -45,13 +59,13 @@ export async function POST(request: NextRequest) {
       );
     }
     
-    // Create a contact message object with timestamp
+    // Create a contact message object with IST timestamp
     const contactMessage: ContactMessage = {
       name,
       email,
       subject,
       message,
-      timestamp: new Date().toISOString()
+      timestamp: formatDateToIST(new Date())
     };
     
     // Save to local log file
@@ -136,12 +150,21 @@ async function saveToGoogleSheet(message: ContactMessage) {
     let sheet = doc.sheetsByIndex[0];
     if (!sheet) {
       console.log('Creating new sheet...');
-      sheet = await doc.addSheet({ title: 'Contact Messages', headerValues: ['Timestamp', 'Name', 'Email', 'Subject', 'Message'] });
+      sheet = await doc.addSheet({
+        title: 'Contact Messages',
+        headerValues: ['Timestamp', 'Name', 'Email', 'Subject', 'Message']
+      });
     } else {
       console.log('Using existing sheet:', sheet.title);
+      
+      // Update headers if they don't match
+      const rows = await sheet.getRows();
+      if (rows.length === 0 || !Object.prototype.hasOwnProperty.call(rows[0], 'Timestamp')) {
+        await sheet.setHeaderRow(['Timestamp', 'Name', 'Email', 'Subject', 'Message']);
+      }
     }
     
-    // Add the row to the sheet
+    // Add the row to the sheet with proper column mapping
     await sheet.addRow({
       Timestamp: message.timestamp,
       Name: message.name,
@@ -181,16 +204,6 @@ async function sendEmailNotification(message: ContactMessage) {
       }
     });
     
-    // Format the date for better readability
-    const formattedDate = new Date(message.timestamp).toLocaleString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-    
     // Email content
     const mailOptions = {
       from: `"Portfolio Contact Form" <${GMAIL_USER}>`,
@@ -200,7 +213,7 @@ async function sendEmailNotification(message: ContactMessage) {
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 5px;">
           <h2 style="color: #333; border-bottom: 1px solid #e0e0e0; padding-bottom: 10px;">New Contact Form Submission</h2>
           
-          <p><strong>Date:</strong> ${formattedDate}</p>
+          <p><strong>Date:</strong> ${message.timestamp}</p>
           <p><strong>Name:</strong> ${message.name}</p>
           <p><strong>Email:</strong> <a href="mailto:${message.email}">${message.email}</a></p>
           <p><strong>Subject:</strong> ${message.subject}</p>
@@ -218,7 +231,7 @@ async function sendEmailNotification(message: ContactMessage) {
       text: `
 New Contact Form Submission
 
-Date: ${formattedDate}
+Date: ${message.timestamp}
 Name: ${message.name}
 Email: ${message.email}
 Subject: ${message.subject}

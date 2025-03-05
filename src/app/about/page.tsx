@@ -35,11 +35,11 @@ export default function AboutPage() {
               
               <div className="flex flex-wrap gap-6 mt-8">
                 <div>
-                  <h3 className="font-bold text-2xl text-primary mb-1">4+</h3>
-                  <p className="text-secondary">Years of Experience</p>
+                  <h3 className="font-bold text-2xl text-primary mb-1">3</h3>
+                  <p className="text-secondary">Hackathons placed in Top 5</p>
                 </div>
                 <div>
-                  <h3 className="font-bold text-2xl text-primary mb-1">20+</h3>
+                  <h3 className="font-bold text-2xl text-primary mb-1">7+</h3>
                   <p className="text-secondary">Projects Completed</p>
                 </div>
                 <div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="card">
+            <div className="card mb-8">
               <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
                 <h3 className="text-xl font-bold mb-2 md:mb-0">CLASS 12</h3>
                 <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm inline-block">2021</span>
@@ -97,6 +97,19 @@ export default function AboutPage() {
               <p className="mt-4">
                 I completed my high school education with a focus on Mathematics, Physics, and Chemistry, 
                 achieving a high score that laid the groundwork for my technical education.
+              </p>
+            </div>
+
+            <div className="card">
+              <div className="flex flex-col md:flex-row justify-between md:items-center mb-4">
+                <h3 className="text-xl font-bold mb-2 md:mb-0">SSC – CLASS 10</h3>
+                <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm inline-block">2019</span>
+              </div>
+              <p className="text-lg mb-2">BHASHYAM HIGH SCHOOL, GUNTUR, ANDHRA PRADESH</p>
+              <p className="text-secondary">GPA: 9.8/10</p>
+              <p className="mt-4">
+                I completed my secondary education with excellent academic performance,
+                building a strong foundation for my future studies in science and technology.
               </p>
             </div>
           </div>

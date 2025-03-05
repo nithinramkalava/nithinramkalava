@@ -10,11 +10,12 @@ export default function Hero() {
   
   const phrases = useMemo(() => [
     "Full Stack Developer",
-    "Post-Quantum Cryptography Specialist",
+    "Data Scientist",
+    "Machine Learning Engineer",
+    "Problem Solver",
     "Web Application Engineer",
     "Data Analytics Enthusiast",
-    "UI/UX Designer",
-    "Problem Solver"
+    "Post-Quantum Cryptography",
   ], []);
   
   const typingSpeed = 72; // Slightly slower typing
@@ -79,8 +80,8 @@ export default function Hero() {
             </h2>
           </div>
           <p className="text-lg text-secondary mb-10 max-w-xl mx-auto animate-[fadeIn_2s_ease-in]">
-            I build responsive, performant web applications and specialize in implementing
-            future-proof cryptographic solutions.
+          I build responsive, high-performance data science and machine learning applications.
+          Specializing in robust data pipelines and advanced analytics solutions.
           </p>
           <div className="flex flex-wrap gap-4 justify-center animate-[fadeIn_2.5s_ease-in]">
             <Link href="/projects" className="btn">

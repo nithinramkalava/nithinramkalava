@@ -310,7 +310,7 @@ export default function SkillsPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6 text-white">Ready to Build Something Amazing?</h2>
           <p className="text-lg max-w-2xl mx-auto mb-8 text-white">
-            Now that you know what I can do, let's discuss how my skills can benefit your project.
+            Now that you know what I can do, let&apos;s discuss how my skills can benefit your project.
           </p>
           <Link 
             href="/contact" 

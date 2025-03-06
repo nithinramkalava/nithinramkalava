@@ -23,8 +23,8 @@ export default function SkillsPage() {
       { name: "TypeScript", description: "Ensuring type safety and scalability in large projects." },
       { name: "React.js", description: "Developing component-based user interfaces." },
       { name: "Next.js", description: "Optimizing server-side rendering and static site generation." },
-      { name: "Redux", description: "Managing complex application state efficiently." },
       { name: "Tailwind CSS", description: "Rapidly styling components with utility-first CSS." },
+      { name: "Excel Macros", description: "Automation tools for Microsoft Excel using VBA programming." },
     ],
     backend: [
       { name: "Node.js", description: "Creating scalable server-side applications." },
@@ -34,13 +34,16 @@ export default function SkillsPage() {
       { name: "GraphQL", description: "Implementing flexible data fetching solutions." },
       { name: "RESTful APIs", description: "Designing and consuming RESTful services." },
       { name: "Authentication/Security", description: "Ensuring secure user authentication and data protection." },
+      { name: ".NET C#", description: "Microsoft's programming language for building applications on the .NET platform." },
+      { name: "C", description: "A general-purpose programming language that's powerful and efficient." },
     ],
     database: [
-      { name: "MongoDB", description: "A NoSQL database for storing and managing data." },
       { name: "PostgreSQL", description: "A powerful open-source relational database." },
+      { name: "MongoDB", description: "A NoSQL database for storing and managing data." },
       { name: "MySQL", description: "A widely used open-source relational database management system." },
       { name: "Firebase", description: "A mobile and web application development platform." },
-      { name: "Redis", description: "An in-memory data structure store used as a database, cache, and message broker." },
+      { name: "Oracle", description: "An enterprise-grade relational database management system." },
+      { name: "PL/SQL", description: "Oracle's procedural extension language for SQL and the Oracle database." },
     ],
     devops: [
       { name: "Git/GitHub", description: "A version control system for tracking changes in code." },

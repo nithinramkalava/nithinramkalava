@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  // const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-background py-12 border-t border-secondary/20">
@@ -84,9 +84,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t border-secondary/20 text-center text-secondary">
-          <p>© {currentYear} Nithin Ram Kalava. All rights reserved.</p>
+          <p> Made by Nithin Ram Kalava. </p>
           <p className="mt-2 text-sm">
-            Built with <span className="text-accent">♥</span> using Next.js & Tailwind CSS
+            with <span className="text-accent">♥</span> using Next.js & Tailwind CSS
           </p>
         </div>
       </div>

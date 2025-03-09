@@ -49,12 +49,12 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="md:w-1/2 order-1 md:order-2 mb-10 md:mb-0">
-              <div className="relative w-full max-w-md h-96 mx-auto rounded-lg overflow-hidden shadow-xl">
+              <div className="relative w-[413px] h-[531px] mx-auto rounded-lg overflow-hidden shadow-xl">
                 <Image
                   src="/images/about-full.jpg"
                   alt="Nithin Ram Kalava"
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 413px"
                   className="object-cover"
                   priority
                 />

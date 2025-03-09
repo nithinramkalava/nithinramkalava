@@ -31,12 +31,13 @@ export default function Home() {
               </Link>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              <div className="relative w-full max-w-md h-80 rounded-lg overflow-hidden shadow-xl">
+              <div className="relative w-[413px] h-[531px] rounded-lg overflow-hidden shadow-xl">
                 <Image
                   src="/images/about.jpg"
                   alt="Nithin Ram Kalava coding"
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 413px"
                 />
               </div>
             </div>

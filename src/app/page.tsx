@@ -138,7 +138,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Frontend</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">HTML, CSS, JavaScript, React, Next.js, Tailwind CSS</p>
+              <p className="text-gray-500 dark:text-gray-500 text-sm">HTML5, CSS, JavaScript, TypeScript, React, Next.js, Tailwind CSS, Excel Macros</p>
             </div>
 
             {/* Backend */}
@@ -149,7 +149,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Backend</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">Node.js, Express, Python, Django, REST APIs, GraphQL</p>
+              <p className="text-gray-500 dark:text-gray-500 text-sm">Node.js, Express.js, Python, Django, GraphQL, RESTful APIs, .NET C#, C</p>
             </div>
 
             {/* Database */}
@@ -160,7 +160,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Database</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">MongoDB, PostgreSQL, MySQL, Redis, Firebase</p>
+              <p className="text-gray-500 dark:text-gray-500 text-sm">PostgreSQL, MongoDB, MySQL, Firebase, Oracle, PL/SQL</p>
             </div>
 
             {/* Tools */}
@@ -171,7 +171,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="font-bold mb-2">Tools & Cloud</h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm">Git, Docker, AWS, GCP, CI/CD, Tableau, Jupyter</p>
+              <p className="text-gray-500 dark:text-gray-500 text-sm">Git/GitHub, Docker, AWS, Google Cloud, Tableau, Jupyter, Pandas/NumPy</p>
             </div>
           </div>
 

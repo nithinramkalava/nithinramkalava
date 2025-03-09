@@ -18,9 +18,9 @@ export default function Hero() {
     "Post-Quantum Cryptography",
   ], []);
   
-  const typingSpeed = 72; // Slightly slower typing
-  const erasingSpeed = 40; // Slightly slower erasing
-  const pauseDelay = 1600; // Slightly longer pause
+  const typingSpeed = 42; // Slightly slower typing
+  const erasingSpeed = 52; // Slightly slower erasing
+  const pauseDelay = 350; // Increase pause to 2 seconds (2000ms)
 
   useEffect(() => {
     let timer: string | number | NodeJS.Timeout | undefined;
@@ -32,7 +32,6 @@ export default function Hero() {
         timer = setTimeout(typeText, typingSpeed);
       } else {
         setIsTyping(false);
-        timer = setTimeout(eraseText, pauseDelay);
       }
     };
 
@@ -42,16 +41,22 @@ export default function Hero() {
         timer = setTimeout(eraseText, erasingSpeed);
       } else {
         setIsTyping(true);
-        // Move to next phrase
         setCurrentPhraseIndex((currentPhraseIndex + 1) % phrases.length);
-        timer = setTimeout(typeText, pauseDelay / 2);
       }
     };
 
     if (isTyping) {
-      timer = setTimeout(typeText, typingSpeed);
+      if (text.length === 0) {
+        timer = setTimeout(typeText, 500);
+      } else {
+        timer = setTimeout(typeText, typingSpeed);
+      }
     } else {
-      timer = setTimeout(eraseText, erasingSpeed);
+      if (text.length === currentPhrase.length) {
+        timer = setTimeout(eraseText, pauseDelay);
+      } else {
+        timer = setTimeout(eraseText, erasingSpeed);
+      }
     }
 
     return () => clearTimeout(timer);

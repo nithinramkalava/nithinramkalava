@@ -3,8 +3,22 @@
 import Link from "next/link";
 import { useState, FormEvent } from "react";
 
+// Validation constants
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const MAX_NAME_LENGTH = 100;
+const MAX_EMAIL_LENGTH = 100;
+const MAX_SUBJECT_LENGTH = 200;
+const MAX_MESSAGE_LENGTH = 5000;
+
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+  
+  const [errors, setErrors] = useState({
     name: "",
     email: "",
     subject: "",
@@ -17,26 +31,85 @@ export default function ContactPageClient() {
     message?: string;
   }>({});
 
+  // Validate a single field
+  const validateField = (field: string, value: string) => {
+    switch(field) {
+      case 'name':
+        return value.length > MAX_NAME_LENGTH ? `Name exceeds ${MAX_NAME_LENGTH} character limit` : "";
+      case 'email':
+        return !EMAIL_REGEX.test(value) ? "Please enter a valid email address" : 
+               value.length > MAX_EMAIL_LENGTH ? `Email exceeds ${MAX_EMAIL_LENGTH} character limit` : "";
+      case 'subject':
+        return value.length > MAX_SUBJECT_LENGTH ? `Subject exceeds ${MAX_SUBJECT_LENGTH} character limit` : "";
+      case 'message':
+        return value.length > MAX_MESSAGE_LENGTH ? `Message exceeds ${MAX_MESSAGE_LENGTH} character limit` : "";
+      default:
+        return "";
+    }
+  };
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
+    
+    // Update form data - allow unlimited typing
     setFormData(prev => ({
       ...prev,
       [id]: value
     }));
+    
+    // Update errors for the field
+    setErrors(prev => ({
+      ...prev,
+      [id]: validateField(id, value)
+    }));
+  };
+
+  const validateForm = () => {
+    // Check if all required fields have values
+    const hasValues = Boolean(formData.name && formData.email && formData.subject && formData.message);
+    
+    // Check all field validations
+    const newErrors = {
+      name: validateField('name', formData.name),
+      email: validateField('email', formData.email),
+      subject: validateField('subject', formData.subject),
+      message: validateField('message', formData.message)
+    };
+    
+    setErrors(newErrors);
+    
+    // Form is valid if all fields have values and no errors
+    return hasValues && !Object.values(newErrors).some(error => error);
   };
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    
+    // Validate form before submission
+    if (!validateForm()) {
+      setSubmitStatus({
+        success: false,
+        message: 'Please fix the form errors before submitting.'
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     setSubmitStatus({});
+    
+    // Sanitize inputs
+    const sanitizedData = {
+      name: formData.name.replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+      email: formData.email.replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+      subject: formData.subject.replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+      message: formData.message.replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    };
     
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(sanitizedData),
       });
       
       const data = await response.json();
@@ -47,19 +120,15 @@ export default function ContactPageClient() {
           message: 'Your message has been sent successfully!'
         });
         // Reset form
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: ""
-        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setErrors({ name: "", email: "", subject: "", message: "" });
       } else {
         setSubmitStatus({
           success: false,
           message: data.error || 'Failed to send message. Please try again.'
         });
       }
-    } catch (error: unknown) {
+    } catch (error) {
       console.error('Error submitting contact form:', error);
       setSubmitStatus({
         success: false,
@@ -180,10 +249,11 @@ export default function ContactPageClient() {
                       id="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      className={`w-full px-4 py-2 border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50`}
                       placeholder="Your name"
                       required
                     />
+                    {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
                   </div>
                   
                   <div>
@@ -193,10 +263,11 @@ export default function ContactPageClient() {
                       id="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      className={`w-full px-4 py-2 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50`}
                       placeholder="Your email"
                       required
                     />
+                    {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
                   </div>
                   
                   <div>
@@ -206,10 +277,11 @@ export default function ContactPageClient() {
                       id="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      className={`w-full px-4 py-2 border ${errors.subject ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50`}
                       placeholder="Subject"
                       required
                     />
+                    {errors.subject && <p className="mt-1 text-sm text-red-600">{errors.subject}</p>}
                   </div>
                   
                   <div>
@@ -219,10 +291,11 @@ export default function ContactPageClient() {
                       rows={6}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50"
+                      className={`w-full px-4 py-2 border ${errors.message ? 'border-red-500' : 'border-gray-300'} rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50`}
                       placeholder="Your message"
                       required
                     ></textarea>
+                    {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
                   </div>
                   
                   <button

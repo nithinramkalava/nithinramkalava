@@ -4,6 +4,7 @@ import path from 'path';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
 import nodemailer from 'nodemailer';
+import { rateLimit } from './rate-limit'; // We'll create this file next
 
 // Define the contact message type
 interface ContactMessage {
@@ -13,6 +14,13 @@ interface ContactMessage {
   message: string;
   timestamp: string;
 }
+
+// Constants for validation
+const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const MAX_NAME_LENGTH = 100;
+const MAX_EMAIL_LENGTH = 100;
+const MAX_SUBJECT_LENGTH = 200;
+const MAX_MESSAGE_LENGTH = 10000;
 
 // Google Sheets setup
 const GOOGLE_SHEET_ID = process.env.GOOGLE_SHEET_ID || '';
@@ -24,13 +32,11 @@ const GMAIL_USER = process.env.GMAIL_USER || '';
 const GMAIL_PASSWORD = process.env.GMAIL_PASSWORD || '';
 const CONTACT_FORM_ADMIN_EMAIL = process.env.CONTACT_FORM_ADMIN_EMAIL || '';
 
-// Debug log for credentials
-console.log('Google Sheet ID:', GOOGLE_SHEET_ID ? 'Configured' : 'Missing');
-console.log('Google Service Account Email:', GOOGLE_SERVICE_ACCOUNT_EMAIL ? 'Configured' : 'Missing');
-console.log('Google Private Key:', GOOGLE_PRIVATE_KEY ? 'Configured (length: ' + GOOGLE_PRIVATE_KEY.length + ')' : 'Missing');
-console.log('Gmail User:', GMAIL_USER ? 'Configured' : 'Missing');
-console.log('Gmail Password:', GMAIL_PASSWORD ? 'Configured' : 'Missing');
-console.log('Admin Email:', CONTACT_FORM_ADMIN_EMAIL ? 'Configured' : 'Missing');
+// Apply rate limiting - 5 requests per hour
+const limiter = rateLimit({
+  interval: 60 * 60 * 1000, // 1 hour
+  uniqueTokenPerInterval: 500, // Max 500 users per hour
+});
 
 // Function to format date in IST
 function formatDateToIST(date: Date): string {
@@ -48,6 +54,17 @@ function formatDateToIST(date: Date): string {
 
 export async function POST(request: NextRequest) {
   try {
+    // Apply rate limiting based on IP
+    const ip = request.headers.get('x-forwarded-for') || 'unknown';
+    try {
+      await limiter.check(5, ip); // 5 requests per hour per IP
+    } catch {
+      return NextResponse.json(
+        { error: 'Rate limit exceeded. Please try again later.' },
+        { status: 429 }
+      );
+    }
+    
     // Parse the request body
     const { name, email, subject, message } = await request.json();
     
@@ -59,12 +76,39 @@ export async function POST(request: NextRequest) {
       );
     }
     
+    // Validate data lengths
+    if (name.length > MAX_NAME_LENGTH ||
+        email.length > MAX_EMAIL_LENGTH ||
+        subject.length > MAX_SUBJECT_LENGTH ||
+        message.length > MAX_MESSAGE_LENGTH) {
+      return NextResponse.json(
+        { error: 'One or more fields exceed maximum length' },
+        { status: 400 }
+      );
+    }
+    
+    // Validate email format
+    if (!EMAIL_REGEX.test(email)) {
+      return NextResponse.json(
+        { error: 'Please enter a valid email address' },
+        { status: 400 }
+      );
+    }
+    
+    // Sanitize inputs to prevent XSS
+    const sanitizedData = {
+      name: name.replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+      email: email.replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+      subject: subject.replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+      message: message.replace(/</g, '&lt;').replace(/>/g, '&gt;'),
+    };
+    
     // Create a contact message object with IST timestamp
     const contactMessage: ContactMessage = {
-      name,
-      email,
-      subject,
-      message,
+      name: sanitizedData.name,
+      email: sanitizedData.email,
+      subject: sanitizedData.subject,
+      message: sanitizedData.message,
       timestamp: formatDateToIST(new Date())
     };
     
@@ -192,15 +236,12 @@ async function sendEmailNotification(message: ContactMessage) {
     
     console.log('Attempting to send email notification...');
     
-    // Create a transporter
+    // Create a transporter with secure TLS settings
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
         user: GMAIL_USER,
         pass: GMAIL_PASSWORD,
-      },
-      tls: {
-        rejectUnauthorized: false
       }
     });
     

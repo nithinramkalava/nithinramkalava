@@ -1,6 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
 import nodemailer from 'nodemailer';
@@ -112,9 +110,6 @@ export async function POST(request: NextRequest) {
       timestamp: formatDateToIST(new Date())
     };
     
-    // Save to local log file
-    await saveToLogFile(contactMessage);
-    
     // Save to Google Sheet
     await saveToGoogleSheet(contactMessage);
     
@@ -132,39 +127,6 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
-}
-
-// Function to save the message to a log file
-async function saveToLogFile(message: ContactMessage) {
-  const logDir = path.join(process.cwd(), 'logs');
-  const logFile = path.join(logDir, 'contact-messages.json');
-  
-  // Create logs directory if it doesn't exist
-  if (!fs.existsSync(logDir)) {
-    fs.mkdirSync(logDir, { recursive: true });
-  }
-  
-  // Read existing messages or create empty array
-  let messages: ContactMessage[] = [];
-  if (fs.existsSync(logFile)) {
-    try {
-      const data = fs.readFileSync(logFile, 'utf8');
-      // Handle empty file case
-      if (data.trim()) {
-        messages = JSON.parse(data);
-      }
-    } catch (error) {
-      console.error('Error parsing log file:', error);
-      // If there's an error parsing the file, we'll start with an empty array
-      // and overwrite the corrupted file
-    }
-  }
-  
-  // Add new message
-  messages.push(message);
-  
-  // Write back to file
-  fs.writeFileSync(logFile, JSON.stringify(messages, null, 2));
 }
 
 // Function to save the message to a Google Sheet

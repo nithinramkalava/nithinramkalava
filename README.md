@@ -1,7 +1,7 @@
 # Nithin Ram Kalava | Full Stack Developer & Data Scientist
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/nithinramkalava)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-brightgreen?style=for-the-badge&logo=vercel)](https://nithinramkalava.vercel.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-brightgreen?style=for-the-badge&logo=vercel)](https://nithinramkalava.is-a.dev)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github)](https://github.com/nithinramkalava)
 
 ## 👨‍💻 About Me
@@ -100,7 +100,7 @@ A data analysis project that examines safety patterns in London's bus network, u
 
 ## 📫 Let's Connect
 
-I'm always open to interesting conversations and opportunities. Feel free to reach out to me on [LinkedIn](https://linkedin.com/in/nithinramkalava) or visit my [portfolio website](https://nithinramkalava.vercel.app).
+I'm always open to interesting conversations and opportunities. Feel free to reach out to me on [LinkedIn](https://linkedin.com/in/nithinramkalava) or visit my [portfolio website](https://nithinramkalava.is-a.dev).
 
 ---
 *This portfolio is built with Next.js, TypeScript, and Tailwind CSS. [View the source code](https://github.com/nithinramkalava/nithinramkalava-portfolio).*

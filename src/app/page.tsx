@@ -57,20 +57,38 @@ export default function Home() {
           </div>
 
           <div className="grid">
-            {/* PC Building Assistant */}
+            {/* CareerPath Navigator */}
             <div className="card">
-              <h3 className="text-xl font-bold mb-3">PC Building Assistant Platform</h3>
+              <h3 className="text-xl font-bold mb-3">CareerPath Navigator</h3>
               <p className="text-secondary mb-4">
-                A full-stack web application that helps users build compatible PC configurations 
-                with real-time compatibility checks and recommendations.
+                A digital platform designed to empower rural students by providing comprehensive 
+                career exploration tools and educational pathway visualizations.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Next.js</span>
+                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">TypeScript</span>
+                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Tailwind CSS</span>
+                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Framer Motion</span>
+              </div>
+              <Link href="/projects#career-path-navigator" className="text-primary hover:underline">
+                Learn more →
+              </Link>
+            </div>
+
+            {/* PQC-Vizz */}
+            <div className="card">
+              <h3 className="text-xl font-bold mb-3">PQC-Vizz</h3>
+              <p className="text-secondary mb-4">
+                An interactive visualization platform for post-quantum cryptographic algorithms, 
+                making complex cryptographic concepts accessible and understandable.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">React</span>
-                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Node.js</span>
-                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Express</span>
-                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">MongoDB</span>
+                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">D3.js</span>
+                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">TypeScript</span>
+                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Web Crypto API</span>
               </div>
-              <Link href="/projects#pc-building" className="text-primary hover:underline">
+              <Link href="/projects#pqc-vizz" className="text-primary hover:underline">
                 Learn more →
               </Link>
             </div>
@@ -88,23 +106,6 @@ export default function Home() {
                 <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">npm</span>
               </div>
               <Link href="/projects#post-quantum" className="text-primary hover:underline">
-                Learn more →
-              </Link>
-            </div>
-
-            {/* Math Minute */}
-            <div className="card">
-              <h3 className="text-xl font-bold mb-3">Math Minute</h3>
-              <p className="text-secondary mb-4">
-                An Android application designed for educational purposes, helping users 
-                improve their mathematical skills with timed exercises.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Android</span>
-                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Java</span>
-                <span className="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Mobile Development</span>
-              </div>
-              <Link href="/projects#math-minute" className="text-primary hover:underline">
                 Learn more →
               </Link>
             </div>

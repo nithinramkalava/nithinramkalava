@@ -1,0 +1,69 @@
+NITHIN RAM KALAVA
+linkedin.com/in/nithinramkalava | github.com/nithinramkalava | nithinramkalava.is-a.dev | nithinramkalava@gmail.com | +91 92939 40180
+PROFESSIONAL SUMMARY
+Results-driven Data Scientist and Full-Stack Developer with expertise in machine learning, data engineering, and web application development. Demonstrated success in implementing post-quantum cryptographic algorithms, building intelligent recommendation systems, and creating accessible, high-performance applications. Proficient in leveraging cutting-edge technologies to transform complex data into actionable insights while maintaining the highest standards of security and user experience.
+SKILLS
+Languages: Python, JavaScript/TypeScript, C, Java, R, HTML/CSS, SQL
+Full-Stack Development: React.js, Next.js, Tailwind CSS, Node.js, REST APIs
+Machine Learning & AI: TensorFlow, PyTorch, Scikit-learn, Deep Learning, NLP, Neural Networks
+Data Science & Analytics: Pandas, NumPy, Statistical Analysis, ETL, Data Modeling, Data Visualization
+Databases & Cloud: PostgreSQL, MongoDB, MySQL, Oracle, AWS, Google Cloud Platform
+DevOps & Tools: Git, GitHub, Docker, Vercel, CI/CD, Linux, Jest, ESLint
+Specialized Areas: Post-Quantum Cryptography, Cybersecurity, UI/UX Design, Accessibility, Performance Optimization
+PROFESSIONAL EXPERIENCE
+CAREERPATH NAVIGATOR | FULL-STACK WEB APPLICATION
+Architected and developed a comprehensive educational platform using Next.js 14, TypeScript, and Tailwind CSS
+Implemented responsive, accessible UI with Framer Motion animations for engaging user experiences
+Engineered complex data structures and algorithms for career matching and recommendation systems
+Optimized performance through code splitting, lazy loading, and image optimization techniques
+Deployed using Vercel with automated CI/CD pipeline and edge network for global content delivery
+Implemented comprehensive SEO and Web Vitals optimization achieving 95+ Lighthouse scores
+Tech Stack: TypeScript, Next.js 14, Tailwind CSS, Framer Motion, React Hooks, Vercel
+PC BUILDING ASSISTANT PLATFORM | FULL STACK WEB APPLICATION
+Developed a dual-interface Next.js application combining LLM-based guidance and interactive component selection
+Engineered recommendation system using collaborative filtering algorithms and PostgreSQL for data management
+Built compatibility verification engine analyzing multiple component attributes for reliable PC configurations
+Integrated Ollama for local LLM deployment with real-time streaming responses and custom prompts
+Tech Stack: TypeScript, Next.js, TailwindCSS, Python (scikit-learn), PostgreSQL, Ollama/LLM
+POST-QUANTUM CRYPTOGRAPHY IMPLEMENTATION | NPM PACKAGE
+Developed 'pqc', a pure JavaScript library implementing NIST's post-quantum cryptographic standards (FIPS 203-205)
+Engineered high-performance implementations achieving 2,300+ operations/second for ML-KEM-768 key generation
+Published npm package garnering 330+ downloads in first week with comprehensive documentation
+Implemented lattice-based and hash-based cryptographic algorithms including optimized Number Theoretic Transform
+Authored technical paper analyzing implementation approaches and performance characteristics
+Tech Stack: JavaScript, NPM, Cryptography, Mathematics, Optimization Algorithms
+MATH MINUTE | ANDROID APPLICATION
+Engineered an educational mobile app gamifying mathematics practice with adaptive difficulty system
+Implemented local data persistence using Android Room Database for user progress tracking
+Created intuitive UI/UX with Material Design principles and smooth animations
+Developed real-time scoring, performance analytics, and multiple difficulty levels
+Tech Stack: Java, XML, Android Studio, SQLite, Material Design
+LONDON BUS SAFETY ANALYSIS | DATA SCIENCE PROJECT
+Created comprehensive Tableau dashboard visualizing London bus safety patterns and incident categories
+Implemented advanced classification algorithms to categorize incidents by severity
+Developed interactive route analysis tools and seasonal trend visualizations
+Generated actionable safety improvement insights through data-driven analysis
+Tech Stack: Python, Pandas, Tableau, Classification Algorithms, Data Visualization
+EDUCATION
+B.TECH. IN COMPUTER SCIENCE | 8.26 GPA | VVIT, Guntur, Andhra Pradesh
+CLASS 12 | 94.7% | Sri Chaitanya Junior College, Guntur, Andhra Pradesh
+CLASS 10 | 9.8 GPA | Bhashyam High School, Guntur, Andhra Pradesh
+CERTIFICATIONS
+CYBERSECURITY & IT
+Google Cybersecurity Professional Certificate (Jun 2024)
+Google IT Support & Google IT Automation with Python (Aug-Nov 2024)
+ADVANCED MACHINE LEARNING & AI
+Deep Learning Specialization - DeepLearning.AI (Dec 2024)
+Natural Language Processing Specialization - DeepLearning.AI (Dec 2024)
+TensorFlow Advanced Techniques Specialization (Apr 2024)
+DATA ANALYTICS & ENGINEERING
+Google Advanced Data Analytics Professional Certificate (Jul 2023)
+Google Business Intelligence Professional Certificate (Jul 2023)
+IBM Data Science Professional Certificate (Jun 2024)
+TECHNICAL EXPERTISE & CLOUD
+Back End Development and APIs - freeCodeCamp (Feb 2024)
+Google Cloud Platform - 50+ hands-on labs completed
+AWS Cloud Platform - AWS AIML & Cloud Virtual Internships
+All certifications available for verification on LinkedIn and Coursera Public Profile
+INTERESTS
+Software Development, Data Science, PC Building, Cryptography, Theaters and Films, Legos

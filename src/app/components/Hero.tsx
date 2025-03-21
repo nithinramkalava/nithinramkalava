@@ -10,12 +10,13 @@ export default function Hero() {
   
   const phrases = useMemo(() => [
     "Full Stack Developer",
+    "Cybersecurity Engineer",
     "Data Scientist",
     "Machine Learning Engineer",
     "Problem Solver",
     "Web Application Engineer",
     "Data Analytics Enthusiast",
-    "Post-Quantum Cryptography",
+    // "Post-Quantum Cryptography",
   ], []);
   
   const typingSpeed = 42; // Slightly slower typing

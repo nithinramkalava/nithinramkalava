@@ -50,7 +50,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link 
-            href="/files/Nithin Ram Kalava Resume.pdf" 
+            href="/files/Nithin Ram Kalava.pdf" 
             target="_blank"
             rel="noopener noreferrer"
             className="btn"
@@ -105,7 +105,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link 
-            href="/files/Nithin Ram Kalava Resume.pdf" 
+            href="/files/Nithin Ram Kalava.pdf" 
             target="_blank"
             rel="noopener noreferrer"
             className="btn text-center"

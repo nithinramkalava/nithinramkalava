@@ -23,22 +23,40 @@ interface Project {
 export default function ProjectsPage() {
   const projects: Project[] = [
     {
-      id: "pc-building",
-      title: "PC Building Assistant Platform",
-      description: "A full-stack web application that helps users build compatible PC configurations with real-time compatibility checks and recommendations based on budget and performance needs.",
-      longDescription: "This comprehensive platform enables users to create PC configurations with confidence by providing real-time compatibility validation and performance metrics. The application offers personalized recommendations based on user budget and intended use case, ensuring optimal component selection. The system leverages a database of thousands of components with detailed specifications to deliver accurate guidance. Users can save and share their builds, compare alternative configurations, and receive price alerts when component prices drop.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "RESTful API", "JWT Authentication", "Redux"],
+      id: "career-path-navigator",
+      title: "CareerPath Navigator",
+      description: "A digital platform designed to empower rural students by providing comprehensive career exploration tools, educational pathway visualizations, and personalized assessments.",
+      longDescription: "CareerPath Navigator addresses a critical challenge faced by students in rural communities: limited awareness of career opportunities and educational pathways. Inspired by the story of G. Koteshwar Rao, an auto driver struggling to guide his children's education, this platform democratizes access to career information. It provides detailed information on diverse career options, visualizes educational requirements through interactive timelines, offers personalized assessments to match students with suitable careers, and includes inspiring success stories. The platform employs modern web technologies to ensure accessibility even in low-bandwidth environments.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "React Icons", "Vercel"],
       keyFeatures: [
-        "Real-time compatibility checking between PC components",
-        "Budget-based component recommendations",
-        "Performance benchmarking and comparison",
-        "User accounts with saved builds",
-        "Price tracking and notifications",
-        "Community sharing of builds"
+        "Comprehensive career exploration system with 100+ career options",
+        "Interactive educational pathway visualizations",
+        "Personalized career assessment tool",
+        "Engaging animations for complex information visualization",
+        "Responsive design for all device sizes",
+        "Optimized performance for low-bandwidth environments"
       ],
-      image: "/images/projects/pc-building.png",
-      demoLink: "https://pc-assistant.netlify.app",
-      codeLink: "https://github.com/nithinkalava/pc-building-assistant"
+      image: "/images/projects/career-path-navigator.png",
+      demoLink: "https://careerpath-nav.vercel.app/",
+      codeLink: "https://github.com/nithinramkalava/CareerPath-Navigator"
+    },
+    {
+      id: "pqc-vizz",
+      title: "PQC-Vizz",
+      description: "An interactive visualization platform for post-quantum cryptographic algorithms, making complex cryptographic concepts accessible and understandable.",
+      longDescription: "PQC-Vizz is an educational platform that visualizes the inner workings of post-quantum cryptographic algorithms. The project aims to demystify complex cryptographic concepts by providing interactive, visual representations of how these algorithms function. It serves as both an educational tool for students and researchers, and a demonstration platform for cryptographic professionals. The visualizations include step-by-step processes, comparative analyses between different algorithms, and simplified explanations of mathematical foundations.",
+      technologies: ["React", "D3.js", "TypeScript", "Web Crypto API", "Tailwind CSS", "Vercel"],
+      keyFeatures: [
+        "Interactive visualizations of post-quantum algorithms",
+        "Step-by-step algorithm execution demonstrations",
+        "Comparative analysis between different PQC approaches",
+        "Educational resources and explanations",
+        "Performance metrics and security level illustrations",
+        "Mobile-responsive design for learning on any device"
+      ],
+      image: "/images/projects/pqc-vizz.png",
+      demoLink: "https://pqc-vizz.vercel.app/",
+      codeLink: "https://github.com/nithinramkalava/pqc-vizz"
     },
     {
       id: "post-quantum",
@@ -73,8 +91,26 @@ export default function ProjectsPage() {
         "Gamification elements for engagement"
       ],
       image: "/images/projects/math-minute.png",
-      demoLink: "https://play.google.com/store/apps/mathminute",
-      codeLink: "https://github.com/nithinkalava/math-minute"
+      demoLink: "https://github.com/nithinramkalava/Math-Minute/releases/tag/debug-releases",
+      codeLink: "https://github.com/nithinramkalava/Math-Minute"
+    },
+    {
+      id: "pc-building",
+      title: "PC Building Assistant Platform",
+      description: "A full-stack web application that helps users build compatible PC configurations with real-time compatibility checks and recommendations based on budget and performance needs.",
+      longDescription: "This comprehensive platform enables users to create PC configurations with confidence by providing real-time compatibility validation and performance metrics. The application offers personalized recommendations based on user budget and intended use case, ensuring optimal component selection. The system leverages a database of thousands of components with detailed specifications to deliver accurate guidance. Users can save and share their builds, compare alternative configurations, and receive price alerts when component prices drop.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "RESTful API", "JWT Authentication", "Redux"],
+      keyFeatures: [
+        "Real-time compatibility checking between PC components",
+        "Budget-based component recommendations",
+        "Performance benchmarking and comparison",
+        "User accounts with saved builds",
+        "Price tracking and notifications",
+        "Community sharing of builds"
+      ],
+      image: "/images/projects/pc-building.png",
+      demoLink: null,
+      codeLink: "https://github.com/nithinkalava/pc-builder"
     },
     {
       id: "london-bus",
@@ -91,8 +127,8 @@ export default function ProjectsPage() {
         "Evidence-based safety improvement recommendations"
       ],
       image: "/images/projects/london-bus.png",
-      demoLink: "https://public.tableau.com/londonbussafety",
-      codeLink: "https://github.com/nithinkalava/london-bus-safety"
+      demoLink: "https://public.tableau.com/app/profile/nithinramkalava/viz/LondonBusSafety_16839704914760/Dashboard",
+      codeLink: "https://public.tableau.com/app/profile/nithinramkalava/vizzes"
     }
   ];
 
@@ -105,7 +141,7 @@ export default function ProjectsPage() {
           alt={project.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover"
+          className="object-contain"
           priority
         />
       </div>
@@ -154,24 +190,16 @@ export default function ProjectsPage() {
   // Project Detail component with type definition
   const ProjectDetail = ({ project }: { project: Project }) => {
     // Special handling for Math Minute image with proper typing
-    const imageStyle: CSSProperties = project.id === "math-minute" 
-      ? { 
-          objectFit: "cover" as const, 
-          objectPosition: "center",
-          width: '100%',
-          height: '100%',
-          maxHeight: '450px'
-        } 
-      : { 
-          width: 'auto', 
-          height: 'auto', 
-          maxWidth: '100%', 
-          maxHeight: '450px' 
-        };
+    const imageStyle: CSSProperties = { 
+      objectFit: "contain" as const, 
+      objectPosition: "center",
+      width: 'auto', 
+      height: 'auto', 
+      maxWidth: '100%', 
+      maxHeight: '450px' 
+    };
     
-    const imageClass = project.id === "math-minute" 
-      ? "object-cover" 
-      : "object-contain mx-auto";
+    const imageClass = "object-contain mx-auto";
     
     return (
       <div id={project.id} className="py-20">
@@ -233,7 +261,7 @@ export default function ProjectsPage() {
                     rel="noopener noreferrer"
                     className="btn bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white"
                   >
-                    View Source Code
+                    {project.id === "london-bus" ? "Tableau Profile" : "View Source Code"}
                   </a>
                 )}
               </div>

@@ -321,7 +321,7 @@ export default function CertificationsPage() {
               Get In Touch
             </Link>
             <Link 
-              href="/Nithin Ram Kalava Resume.pdf" 
+              href="/files/Nithin Ram Kalava.pdf" 
               target="_blank"
               className="btn bg-transparent border-2 border-white text-white hover:bg-white/20"
             >

@@ -8,7 +8,7 @@
 
 I'm an enthusiastic Data Scientist and Full-Stack Developer with a passionate focus on machine learning, crafting robust data pipelines, and developing intelligent technological solutions. Currently pursuing a B.Tech in Computer Science at VVIT, Guntur (2021-2025), I approach problems with analytical thinking and creative solutions while maintaining the highest standards of data privacy and security.
 
-- 🔭 Specializing in **Machine Learning**, **Web Development**, and **Post-Quantum Cryptography**
+- 🔭 Specializing in **Machine Learning** and **Web Development**
 - 🌱 Currently exploring advanced **AI/ML models** and **cryptographic solutions**
 - 👯 Open to collaborating on innovative projects in **Data Science** and **Web Development**
 - 💬 Let's talk about **React**, **Next.js**, **Python**, **Machine Learning**, or **Cryptography**

@@ -40,7 +40,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <Link href="/" className="text-xl font-bold">
-              Nithin<span className="text-[var(--primary)]">Ram</span>
+              Nithin <span className="text-[var(--primary)]">Ram</span>
             </Link>
             <p className="mt-4 text-[var(--muted-foreground)] max-w-md">
               A passionate Full Stack Developer and Data Scientist specializing in innovative web applications, 

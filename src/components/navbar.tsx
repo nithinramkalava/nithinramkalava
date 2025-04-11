@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Button } from './ui/button';
+import { ThemeToggle } from './theme-toggle';
 
 interface NavItem {
   name: string;
@@ -73,42 +74,47 @@ export function Navbar() {
                 {item.name}
               </a>
             ))}
-            <a href="/files/Nithin Ram Kalava.pdf" target="_blank" rel="noopener noreferrer">
-              <Button variant="primary" size="sm">
-                Resume
-              </Button>
-            </a>
+            <div className="flex items-center space-x-4">
+              <a href="/files/Nithin Ram Kalava.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="primary" size="sm">
+                  Resume
+                </Button>
+              </a>
+              <ThemeToggle />
+            </div>
           </nav>
 
-          {/* Mobile navigation toggle */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
+          {/* Mobile view - Theme toggle and menu button */}
+          <div className="md:hidden flex items-center space-x-2">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
             >
-              {isMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              )}
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                {isMenuOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                )}
+              </svg>
+            </button>
+            <ThemeToggle />
+          </div>
         </div>
 
         {/* Mobile navigation menu */}

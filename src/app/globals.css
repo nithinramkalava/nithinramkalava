@@ -23,8 +23,25 @@
   --font-mono: var(--font-geist-mono);
 }
 
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #1a1a1a;
+  --card-foreground: #ededed;
+  --primary: #339eff;
+  --primary-foreground: #ffffff;
+  --secondary: #9c49f5;
+  --secondary-foreground: #ffffff;
+  --accent: #ff9999;
+  --accent-foreground: #000000;
+  --muted: #343a40;
+  --muted-foreground: #adb5bd;
+  --border: #343a40;
+}
+
+/* Keep the media query for system preference when no explicit theme is set */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not(.light):not(.dark) {
     --background: #0a0a0a;
     --foreground: #ededed;
     --card: #1a1a1a;

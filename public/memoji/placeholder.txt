@@ -1,0 +1,15 @@
+For the chat section to work with the memoji feature, you need to create the following memoji images:
+
+1. Place your memoji images in this directory with these filenames:
+   - greeting.png - A waving or greeting expression
+   - thinking.png - A thoughtful expression (finger on chin or similar)
+   - talking.png - An expression with mouth open as if speaking
+   - idle.png - A neutral expression
+
+You can create these using Apple's Memoji feature if you have an iOS device, 
+or use any avatar creator that allows for these expressions.
+
+Each image should be a PNG with transparent background, ideally 300x300 pixels or larger.
+
+If you don't have memojis ready, you can use any avatar images with similar expressions,
+or replace the Image component in the chat-section.tsx file with a different visual element. 

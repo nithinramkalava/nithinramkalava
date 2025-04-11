@@ -172,3 +172,237 @@ body {
 @layer base {
   /* Base styles can go here */
 }
+
+/* Markdown styling in chat */
+.markdown-content {
+  @apply text-sm whitespace-pre-wrap;
+}
+
+.markdown-content p {
+  @apply mb-2;
+}
+
+.markdown-content p:last-child {
+  @apply mb-0;
+}
+
+.markdown-content a {
+  @apply text-[var(--primary)] underline;
+}
+
+.markdown-content h1, 
+.markdown-content h2, 
+.markdown-content h3, 
+.markdown-content h4, 
+.markdown-content h5, 
+.markdown-content h6 {
+  @apply font-bold my-2;
+}
+
+.markdown-content h1 {
+  @apply text-lg;
+}
+
+.markdown-content h2 {
+  @apply text-base;
+}
+
+.markdown-content h3, 
+.markdown-content h4, 
+.markdown-content h5, 
+.markdown-content h6 {
+  @apply text-sm;
+}
+
+.markdown-content ul, 
+.markdown-content ol {
+  @apply pl-5 mb-2;
+}
+
+.markdown-content ul {
+  @apply list-disc;
+}
+
+.markdown-content ol {
+  @apply list-decimal;
+}
+
+.markdown-content blockquote {
+  @apply pl-3 border-l-2 border-[var(--muted-foreground)] italic my-2;
+}
+
+.markdown-content code {
+  @apply font-mono bg-[var(--muted)] px-1 py-0.5 rounded text-xs;
+}
+
+.markdown-content pre {
+  @apply bg-[var(--muted)] p-3 rounded-md overflow-x-auto my-3 border border-[var(--border)];
+}
+
+.markdown-content pre code {
+  @apply bg-transparent p-0 block w-full text-xs;
+  color: var(--foreground);
+}
+
+/* Enhanced code highlighting */
+.markdown-content pre .token.comment,
+.markdown-content pre .token.prolog,
+.markdown-content pre .token.doctype,
+.markdown-content pre .token.cdata {
+  @apply text-[var(--muted-foreground)];
+}
+
+.markdown-content pre .token.punctuation {
+  @apply text-[var(--foreground)];
+}
+
+.markdown-content pre .token.namespace {
+  @apply opacity-70;
+}
+
+.markdown-content pre .token.property,
+.markdown-content pre .token.tag,
+.markdown-content pre .token.boolean,
+.markdown-content pre .token.number,
+.markdown-content pre .token.constant,
+.markdown-content pre .token.symbol {
+  @apply text-[var(--primary)];
+}
+
+.markdown-content pre .token.selector,
+.markdown-content pre .token.attr-name,
+.markdown-content pre .token.string,
+.markdown-content pre .token.char,
+.markdown-content pre .token.builtin {
+  @apply text-[var(--secondary)];
+}
+
+.markdown-content pre .token.operator,
+.markdown-content pre .token.entity,
+.markdown-content pre .token.url,
+.markdown-content pre .language-css .token.string,
+.markdown-content pre .style .token.string {
+  @apply text-[var(--accent)];
+}
+
+.markdown-content pre .token.keyword {
+  @apply text-[var(--primary)]/80;
+}
+
+.markdown-content pre .token.regex,
+.markdown-content pre .token.important,
+.markdown-content pre .token.variable {
+  @apply text-[var(--secondary)];
+}
+
+.markdown-content table {
+  @apply w-full border-collapse my-2;
+}
+
+.markdown-content th, 
+.markdown-content td {
+  @apply border border-[var(--border)] px-2 py-1 text-xs;
+}
+
+.markdown-content th {
+  @apply font-bold bg-[var(--muted)];
+}
+
+.markdown-content img {
+  @apply max-w-full rounded my-2;
+}
+
+/* Prism.js syntax highlighting */
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: var(--font-mono), Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  font-size: 0.85em;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+
+/* Dark theme overrides */
+@media (prefers-color-scheme: dark) {
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: #8b949e;
+  }
+
+  .token.punctuation {
+    color: #c9d1d9;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol {
+    color: #79c0ff;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin {
+    color: #a5d6ff;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #f0883e;
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #ff7b72;
+  }
+
+  .token.function {
+    color: #d2a8ff;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #ffa657;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+}

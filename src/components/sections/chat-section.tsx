@@ -2,6 +2,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '../ui/button';
 import { Send, Loader2, Bot, User } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-typescript';
+import 'prismjs/components/prism-python';
+import 'prismjs/components/prism-jsx';
+import 'prismjs/components/prism-tsx';
+import 'prismjs/components/prism-css';
+import 'prismjs/components/prism-json';
+import 'prismjs/components/prism-markdown';
 
 type Message = {
   role: 'user' | 'assistant';
@@ -18,6 +29,7 @@ export function ChatSection() {
   ]);
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [memojiState, setMemojiState] = useState<'greeting' | 'thinking' | 'talking' | 'idle'>('greeting');
   const [typingText, setTypingText] = useState('');
@@ -29,6 +41,13 @@ export function ChatSection() {
     setIsFullscreen(!isFullscreen);
     // Scroll to the section when entering/exiting fullscreen to ensure it's visible
     document.getElementById('chat-section')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Function to focus the input field
+  const focusInput = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
   };
 
   // Function to simulate typing effect
@@ -58,6 +77,9 @@ export function ChatSection() {
           setFullResponse('');
           setTypingText('');
           
+          // Focus the input after response is complete
+          focusInput();
+          
           // Return to idle after typing is complete
           setTimeout(() => {
             setMemojiState('idle');
@@ -69,65 +91,23 @@ export function ChatSection() {
     return () => clearInterval(typingTimer);
   }, [isTyping, fullResponse]);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!input.trim()) return;
+  // Initialize Prism for syntax highlighting
+  useEffect(() => {
+    Prism.highlightAll();
+  }, [messages]);
 
-    // Add user message to chat
-    const userMessage: Message = { role: 'user', content: input };
-    setMessages(prev => [...prev, userMessage]);
-    setInput('');
-    setIsLoading(true);
-    setMemojiState('thinking');
-
-    try {
-      // Call local Ollama API
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          messages: [...messages, userMessage],
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to get response');
-      }
-
-      const data = await response.json();
-      
-      // Instead of adding the response directly, set up for typing animation
-      setMemojiState('talking');
-      setFullResponse(data.response);
-      setIsTyping(true);
-      
-      // Add an empty message while typing is in progress
-      if (!typingText) {
-        setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
-      }
-      
-    } catch (error) {
-      console.error('Error:', error);
-      setMemojiState('idle');
-      setFullResponse("Sorry, I'm having trouble connecting to my brain right now. Please make sure Ollama is running locally on your machine.");
-      setIsTyping(true);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  // Auto-scroll to bottom of messages - only within the chat container
+  // Auto-scroll to bottom of messages - within the chat container
   useEffect(() => {
     if (messagesEndRef.current) {
-      // Use a more contained scroll approach that doesn't affect the whole page
-      const messagesContainer = messagesEndRef.current.parentElement;
-      if (messagesContainer) {
-        messagesContainer.scrollTop = messagesContainer.scrollHeight;
-      }
+      // Use requestAnimationFrame to ensure DOM has updated
+      requestAnimationFrame(() => {
+        const messagesContainer = messagesEndRef.current?.parentElement;
+        if (messagesContainer) {
+          messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+      });
     }
-  }, [messages]);
+  }, [messages, typingText, isTyping]);
 
   // Initial greeting animation
   useEffect(() => {
@@ -198,6 +178,54 @@ export function ChatSection() {
     }
   };
 
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+
+    // Add user message to chat
+    const userMessage: Message = { role: 'user', content: input };
+    setMessages(prev => [...prev, userMessage]);
+    setInput('');
+    setIsLoading(true);
+    setMemojiState('thinking');
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          messages: [...messages, userMessage],
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to get response');
+      }
+
+      const data = await response.json();
+      
+      // Instead of adding the response directly, set up for typing animation
+      setMemojiState('talking');
+      setFullResponse(data.response);
+      setIsTyping(true);
+      
+      // Add an empty message while typing is in progress
+      if (!typingText) {
+        setMessages(prev => [...prev, { role: 'assistant', content: '' }]);
+      }
+      
+    } catch (error) {
+      console.error('Error:', error);
+      setMemojiState('idle');
+      setFullResponse("Sorry, I'm having trouble connecting to my brain right now.");
+      setIsTyping(true);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="chat-section" className={`py-16 px-4 relative overflow-hidden ${isFullscreen ? 'fixed inset-0 z-50 bg-[var(--background)] overflow-y-auto' : ''}`}>
       {/* Background elements */}
@@ -208,7 +236,7 @@ export function ChatSection() {
             <span className="text-gradient">Chat with Virtual Nithin</span>
           </h2>
           <p className="text-[var(--muted-foreground)] max-w-2xl mx-auto">
-            Have questions about my experience or skills? My AI twin is here to help! Powered by Ollama running locally.
+            Have questions about my experience or skills? My AI twin is here to help!.
           </p>
         </div>
 
@@ -290,7 +318,7 @@ export function ChatSection() {
                 <div className="bg-[var(--card)] border-b border-[var(--border)] p-4 flex items-center justify-between">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
-                    <span className="font-medium">Virtual Nithin - Powered by Ollama</span>
+                    <span className="font-medium">Kind of an Interview?</span>
                   </div>
                   <Button 
                     variant="ghost" 
@@ -323,11 +351,48 @@ export function ChatSection() {
                             : 'bg-[var(--card)] border border-[var(--border)] rounded-tl-none'
                         }`}
                       >
-                        <p className="whitespace-pre-wrap text-sm">
-                          {isTyping && index === messages.length - 1 && message.role === 'assistant' 
-                            ? typingText
-                            : message.content}
-                        </p>
+                        {isTyping && index === messages.length - 1 && message.role === 'assistant' ? (
+                          <p className="whitespace-pre-wrap text-sm">{typingText}</p>
+                        ) : message.role === 'user' ? (
+                          <p className="whitespace-pre-wrap text-sm">{message.content}</p>
+                        ) : (
+                          <div className="markdown-content">
+                            <ReactMarkdown 
+                              remarkPlugins={[remarkGfm]}
+                              components={{
+                                // Open external links in new tab
+                                a: (props) => (
+                                  <a target="_blank" rel="noopener noreferrer" {...props} />
+                                ),
+                                // Custom code block component with language detection
+                                code: ({className, children, ...props}) => {
+                                  const match = /language-(\w+)/.exec(className || '');
+                                  const language = match ? match[1] : 'text';
+                                  
+                                  return (
+                                    <code
+                                      className={className}
+                                      data-language={language}
+                                      {...props}
+                                    >
+                                      {children}
+                                    </code>
+                                  );
+                                },
+                                // Make sure code blocks are wrapped in pre tags
+                                pre: (props) => {
+                                  return (
+                                    <pre className="language-javascript">
+                                      {props.children}
+                                    </pre>
+                                  );
+                                }
+                              }}
+                            >
+                              {message.content}
+                            </ReactMarkdown>
+                          </div>
+                        )}
                       </div>
                       {message.role === 'user' && (
                         <div className="w-8 h-8 rounded-full bg-[var(--secondary)]/10 flex items-center justify-center">
@@ -359,6 +424,7 @@ export function ChatSection() {
                       placeholder="Ask me anything..."
                       className="flex-1 bg-[var(--background)] border border-[var(--border)] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]/20"
                       disabled={isLoading}
+                      ref={inputRef}
                     />
                     <Button type="submit" variant="primary" disabled={isLoading || !input.trim()}>
                       {isLoading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send size={16} />}

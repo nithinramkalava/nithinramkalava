@@ -4,15 +4,6 @@ import { Button } from '../ui/button';
 import { Send, Loader2, Bot, User } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import Prism from 'prismjs';
-import 'prismjs/components/prism-javascript';
-import 'prismjs/components/prism-typescript';
-import 'prismjs/components/prism-python';
-import 'prismjs/components/prism-jsx';
-import 'prismjs/components/prism-tsx';
-import 'prismjs/components/prism-css';
-import 'prismjs/components/prism-json';
-import 'prismjs/components/prism-markdown';
 
 type Message = {
   role: 'user' | 'assistant';
@@ -90,11 +81,6 @@ export function ChatSection() {
     
     return () => clearInterval(typingTimer);
   }, [isTyping, fullResponse]);
-
-  // Initialize Prism for syntax highlighting
-  useEffect(() => {
-    Prism.highlightAll();
-  }, [messages]);
 
   // Auto-scroll to bottom of messages - within the chat container
   useEffect(() => {
@@ -364,29 +350,20 @@ export function ChatSection() {
                                 a: (props) => (
                                   <a target="_blank" rel="noopener noreferrer" {...props} />
                                 ),
-                                // Custom code block component with language detection
+                                // Simplified code block component
                                 code: ({className, children, ...props}) => {
-                                  const match = /language-(\w+)/.exec(className || '');
-                                  const language = match ? match[1] : 'text';
-                                  
                                   return (
-                                    <code
-                                      className={className}
-                                      data-language={language}
-                                      {...props}
-                                    >
+                                    <code className={className} {...props}>
                                       {children}
                                     </code>
                                   );
                                 },
-                                // Make sure code blocks are wrapped in pre tags
-                                pre: (props) => {
-                                  return (
-                                    <pre className="language-javascript">
-                                      {props.children}
-                                    </pre>
-                                  );
-                                }
+                                // Basic pre tag handling for code blocks
+                                pre: (props) => (
+                                  <pre className="rounded-md bg-[var(--muted)]/30 p-2 overflow-auto my-2">
+                                    {props.children}
+                                  </pre>
+                                )
                               }}
                             >
                               {message.content}

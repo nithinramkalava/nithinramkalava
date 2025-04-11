@@ -36,7 +36,7 @@ export function AboutSection() {
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <div>
-          <h3 className="text-2xl font-bold mb-4">Who I Am</h3>
+          <h3 className="text-2xl font-bold mb-4 border-b border-[var(--border)] pb-2">Who I Am</h3>
           <div className="space-y-4 text-[var(--muted-foreground)]">
             <p>
               I&apos;m a passionate Full Stack Developer and Data Scientist with expertise in building innovative 
@@ -55,7 +55,7 @@ export function AboutSection() {
           </div>
 
           <div className="mt-8">
-            <h3 className="text-2xl font-bold mb-4">Interests & Hobbies</h3>
+            <h3 className="text-2xl font-bold mb-4 border-b border-[var(--border)] pb-2">Interests & Hobbies</h3>
             <div className="flex flex-wrap gap-2">
               <Badge variant="outline">Software Development</Badge>
               <Badge variant="outline">Data Science</Badge>
@@ -68,7 +68,7 @@ export function AboutSection() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold mb-4">Education</h3>
+          <h3 className="text-2xl font-bold mb-4 border-b border-[var(--border)] pb-2">Education</h3>
           <div className="space-y-6">
             {educationItems.map((item, index) => (
               <div key={index} className="p-4 bg-[var(--card)] border border-[var(--border)] rounded-lg">

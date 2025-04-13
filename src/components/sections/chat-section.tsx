@@ -238,7 +238,7 @@ export function ChatSection() {
                   {getExpressionText().map((text, index) => (
                     <div 
                       key={index}
-                      className={`absolute text-sm bg-white dark:bg-slate-800 px-3 py-1 rounded-full shadow-sm
+                      className={`absolute text-sm bg-[var(--card)] px-3 py-1 rounded-full shadow-sm
                                  opacity-0 animate-float-and-fade
                                  ${index === 0 ? 'top-5 left-5' : 
                                    index === 1 ? 'top-12 right-3' : 

@@ -287,14 +287,14 @@ Software Development, Data Science, PC Building, Cryptography, Theaters and Film
 -----------------------------------DATAEND-----------------------------------`;
 
 // Retrieve the GitHub Token from environment variables
-const githubToken = process.env.GITHUB_TOKEN;
+const githubToken = process.env.MODELS_GITHUB_TOKEN;
 const modelName = "Meta-Llama-3.1-8B-Instruct"; // The model you want to use
 const endpoint = "https://models.inference.ai.azure.com"; // GitHub Models endpoint
 
 export async function POST(request: Request) {
   // Check if the token is configured
   if (!githubToken) {
-    console.error('Error: GITHUB_TOKEN environment variable is not set.');
+    console.error('Error: MODELS_GITHUB_TOKEN environment variable is not set.');
     return NextResponse.json(
       { error: 'API authentication token is missing.' },
       { status: 500 } // Internal Server Error because config is missing

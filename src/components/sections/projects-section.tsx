@@ -60,7 +60,7 @@ export function ProjectsSection() {
       title: "Post-Quantum Cryptography Implementation",
       description: "An npm package implementing post-quantum cryptographic algorithms for secure communication in a quantum computing era, with focus on lattice-based cryptography.",
       image: "/images/projects/post-quantum.png",
-      technologies: ["JavaScript", "Node.js", "Cryptography", "npm", "WebAssembly", "Mathematical Algorithms"],
+      technologies: ["JavaScript", "Node.js", "Cryptography", "npm", "Mathematical Algorithms"],
       githubUrl: "https://github.com/nithinkalava/post-quantum-crypto",
       featured: true,
       keyFeatures: [
@@ -92,8 +92,9 @@ export function ProjectsSection() {
       title: "PC Building Assistant Platform",
       description: "A full-stack web application that helps users build compatible PC configurations with real-time compatibility checks and recommendations based on budget and performance needs.",
       image: "/images/projects/pc-building.png",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "RESTful API", "JWT Authentication", "Redux"],
-      githubUrl: "https://github.com/nithinkalava/pc-builder",
+      technologies: ["PostgreSQL", "Next.js", "Node.js", "Python", "RESTful API"],
+      demoUrl: "https://pcbuilder-ai.vercel.app/",
+      githubUrl: "https://github.com/nithinramkalava/build-your-pc",
       keyFeatures: [
         "Real-time compatibility checking between PC components",
         "Budget-based component recommendations",

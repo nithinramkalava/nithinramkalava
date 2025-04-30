@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nithin Ram Kalava | Full Stack Developer & Data Scientist",
-  description: "Portfolio of Nithin Ram Kalava - Specializing in Full Stack Development, Data Science, and Post-Quantum Cryptography",
-  keywords: ["Full Stack Developer", "Data Scientist", "Post-Quantum Cryptography", "Machine Learning", "Next.js", "React"],
+  title: "Nithin Ram Kalava",
+  description: "Software Engineer | AI/ML Developer | Full Stack Builder specializing in intelligent, scalable solutions at the intersection of web development, AI, and cryptographic security.",
+  keywords: ["Software Engineer", "AI/ML Developer", "Full Stack", "Post-Quantum Cryptography", "Machine Learning", "Next.js", "React", "PostgreSQL"],
 };
 
 export default function RootLayout({

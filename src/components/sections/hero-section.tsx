@@ -16,7 +16,7 @@ export function HeroSection() {
   const whoamiCommand = 'whoami';
   const nameOutput = 'Nithin Ram Kalava';
   const skillsCommand = 'skills';
-  const skillsOutput = "[\'NextJS\', \'React\', \'TypeScript\', \'Python\', \'Data Science\', \'Machine Learning\', \'Cryptography\']";
+  const skillsOutput = "[\'NextJS\', \'TypeScript\', \'Python\', \'Machine Learning\', \'PostgreSQL\', \'Post-Quantum Cryptography\', \'Full Stack\']";
   const interestsCommand = 'interests';
   const interestsOutput = "[\'Software Development\', \'Data Science\', \'PC Building\', \'Cryptography\', \'Theaters and Films\', \'Legos\']";
 
@@ -104,14 +104,13 @@ export function HeroSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="flex flex-col justify-center">
               <span className="text-[var(--primary)] font-medium mb-4">
-                Full Stack Developer & Data Scientist
+                Software Engineer | AI/ML Developer | Full Stack Builder
               </span>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Hi, I&apos;m <span className="text-gradient">Nithin Ram Kalava</span>
               </h1>
               <p className="text-xl mb-8 text-[var(--muted-foreground)] max-w-2xl">
-                I build innovative and user-friendly web applications, specializing in machine learning, 
-                data analytics, and post-quantum cryptography.
+                Building intelligent, scalable solutions at the intersection of web development, AI, and cryptographic security.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link 

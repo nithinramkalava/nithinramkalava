@@ -23,27 +23,43 @@ export function ProjectsSection() {
   
   const projects: ProjectType[] = [
     {
-      title: "CareerPath Navigator",
-      description: "A digital platform designed to empower rural students by providing comprehensive career exploration tools, educational pathway visualizations, and personalized assessments.",
-      image: "/images/projects/career-path-navigator.png",
-      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "React Icons", "Vercel"],
-      demoUrl: "https://careerpath-nav.vercel.app/",
-      githubUrl: "https://github.com/nithinramkalava/CareerPath-Navigator",
+      title: "PC Building Assistant Platform",
+      description: "An intelligent platform that simplifies PC component selection through hybrid AI-powered recommendations and compatibility verification. Combines conversational interfaces with traditional builder UI, backed by machine learning rankings and a robust PostgreSQL database.",
+      image: "/images/projects/pc-building.png",
+      technologies: ["PostgreSQL", "Next.js", "Node.js", "Python", "TypeScript", "Scikit-learn", "Ollama", "Tailwind CSS"],
+      demoUrl: "https://pcbuilder-ai.vercel.app/",
+      githubUrl: "https://github.com/nithinramkalava/build-your-pc",
       featured: true,
       keyFeatures: [
-        "Comprehensive career exploration system with 100+ career options",
-        "Interactive educational pathway visualizations",
-        "Personalized career assessment tool",
-        "Engaging animations for complex information visualization",
-        "Responsive design for all device sizes",
-        "Optimized performance for low-bandwidth environments"
+        "Database-centric compatibility enforcement via PL/pgSQL stored functions",
+        "ML-based component ranking using Gradient Boosting regression models",
+        "Dynamic budget allocation algorithm optimizing component distribution",
+        "Conversational UI powered by Ollama (Qwen 2.5 14B model)",
+        "End-to-end data pipeline from web scraping to PostgreSQL database",
+        "Dual interface for both novice and expert users"
+      ]
+    },
+    {
+      title: "Post-Quantum Cryptography Implementation",
+      description: "A pure JavaScript library implementing NIST-approved post-quantum cryptographic standards, accompanied by an interactive visualization platform that makes complex quantum-resistant algorithms accessible and understandable.",
+      image: "/images/projects/post-quantum.png",
+      technologies: ["JavaScript", "Node.js", "Next.js", "SVG", "TypeScript", "Cryptography", "Mathematical Algorithms"],
+      githubUrl: "https://www.npmjs.com/package/pqc",
+      featured: true,
+      keyFeatures: [
+        "Full implementation of NIST standards (ML-KEM/Kyber, ML-DSA/Dilithium, SLH-DSA/SPHINCS+)",
+        "High-performance JavaScript with >2300 ML-KEM operations/second",
+        "NPM package with 978+ downloads",
+        "Interactive educational visualizations with step-by-step algorithm execution",
+        "Comprehensive documentation and research paper",
+        "Modular ES Module architecture with pure JavaScript implementation"
       ]
     },
     {
       title: "PQC-Vizz",
-      description: "An interactive visualization platform for post-quantum cryptographic algorithms, making complex cryptographic concepts accessible and understandable.",
+      description: "An interactive visualization platform for post-quantum cryptographic algorithms, making complex cryptographic concepts accessible and understandable through dynamic visual representations and step-by-step execution flows.",
       image: "/images/projects/pqc-vizz.png",
-      technologies: ["Next.js", "TypeScript", "pqc", "Tailwind CSS", "Vercel"],
+      technologies: ["Next.js", "TypeScript", "SVG", "React Hooks", "Tailwind CSS", "Vercel"],
       demoUrl: "https://pqc-vizz.vercel.app/",
       githubUrl: "https://github.com/nithinramkalava/pqc-vizz",
       featured: true,
@@ -51,62 +67,47 @@ export function ProjectsSection() {
         "Interactive visualizations of post-quantum algorithms",
         "Step-by-step algorithm execution demonstrations",
         "Comparative analysis between different PQC approaches",
-        "Educational resources and explanations",
-        "Performance metrics and security level illustrations",
-        "Mobile-responsive design for learning on any device"
+        "SVG-based data structure and hexadecimal grid visualizations",
+        "Client-side execution of cryptographic operations",
+        "Educational resources explaining quantum threat landscape"
       ]
     },
     {
-      title: "Post-Quantum Cryptography Implementation",
-      description: "An npm package implementing post-quantum cryptographic algorithms for secure communication in a quantum computing era, with focus on lattice-based cryptography.",
-      image: "/images/projects/post-quantum.png",
-      technologies: ["JavaScript", "Node.js", "Cryptography", "npm", "Mathematical Algorithms"],
-      githubUrl: "https://github.com/nithinkalava/post-quantum-crypto",
+      title: "CareerPath Navigator",
+      description: "A digital platform designed to empower rural students with limited connectivity by providing comprehensive career exploration tools, educational pathway visualizations, and personalized assessments.",
+      image: "/images/projects/career-path-navigator.png",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "React Hooks", "Vercel"],
+      demoUrl: "https://careerpath-nav.vercel.app/",
+      githubUrl: "https://github.com/nithinramkalava/CareerPath-Navigator",
       featured: true,
       keyFeatures: [
-        "Implementation of NIST-approved post-quantum algorithms",
-        "Key encapsulation mechanisms (KEMs)",
-        "Digital signature schemes",
-        "Hybrid classical/post-quantum modes",
-        "Comprehensive documentation and examples",
-        "Performance optimizations for JavaScript environments"
+        "Mobile-first, responsive design optimized for low-bandwidth environments",
+        "Interactive career pathway visualization with progressive disclosure",
+        "Personalized career assessment algorithm",
+        "Performance optimizations for resource-constrained devices",
+        "Accessible UI with simplified language and intuitive navigation",
+        "Modular component architecture with atomic design principles"
       ]
     },
     {
       title: "Math Minute",
-      description: "An Android application designed for educational purposes, helping users improve their mathematical skills with timed exercises and personalized learning paths.",
+      description: "An educational Android application helping users improve mathematical skills through adaptive difficulty levels, timed exercises, and comprehensive performance tracking.",
       image: "/images/projects/math-minute.png",
       technologies: ["Java", "Android SDK", "SQLite", "UI/UX Design", "Educational Technology"],
       demoUrl: "https://github.com/nithinramkalava/Math-Minute/releases/tag/debug-releases",
       githubUrl: "https://github.com/nithinramkalava/Math-Minute",
       keyFeatures: [
-        "Adaptive difficulty based on user performance",
-        "Multiple mathematics operation modes",
-        "Timed challenge modes",
-        "Performance tracking and analytics",
-        "Offline functionality",
-        "Gamification elements for engagement"
-      ]
-    },
-    {
-      title: "PC Building Assistant Platform",
-      description: "A full-stack web application that helps users build compatible PC configurations with real-time compatibility checks and recommendations based on budget and performance needs.",
-      image: "/images/projects/pc-building.png",
-      technologies: ["PostgreSQL", "Next.js", "Node.js", "Python", "RESTful API"],
-      demoUrl: "https://pcbuilder-ai.vercel.app/",
-      githubUrl: "https://github.com/nithinramkalava/build-your-pc",
-      keyFeatures: [
-        "Real-time compatibility checking between PC components",
-        "Budget-based component recommendations",
-        "Performance benchmarking and comparison",
-        "User accounts with saved builds",
-        "Price tracking and notifications",
-        "Community sharing of builds"
+        "Adaptive difficulty adjustment based on user performance metrics",
+        "Multiple operation modes targeting different mathematical skills",
+        "Offline functionality with local data persistence",
+        "Performance analytics and progress visualization",
+        "Gamification elements for increased engagement",
+        "OOP principles demonstrated through modular code architecture"
       ]
     },
     {
       title: "London Bus Safety Analysis",
-      description: "A data analysis project that examines safety patterns in London's bus network, utilizing Tableau for visualization and Python for data processing.",
+      description: "A data analysis project that examines safety patterns in London's bus network, utilizing Python for data processing and Tableau for interactive visualizations to identify incident hotspots and temporal patterns.",
       image: "/images/projects/london-bus.png",
       technologies: ["Python", "Pandas", "NumPy", "Tableau", "Data Cleaning", "Statistical Analysis"],
       demoUrl: "https://public.tableau.com/app/profile/nithinramkalava/viz/LondonBusSafety_16839704914760/Dashboard",
@@ -114,9 +115,9 @@ export function ProjectsSection() {
       keyFeatures: [
         "Comprehensive analysis of bus safety incident data",
         "Geospatial visualization of incident hotspots",
-        "Temporal pattern identification",
+        "Temporal pattern identification and trend analysis",
         "Correlation analysis with external factors",
-        "Interactive dashboard for exploration",
+        "Interactive dashboard for exploration and filtering",
         "Evidence-based safety improvement recommendations"
       ]
     }
@@ -222,7 +223,7 @@ export function ProjectsSection() {
                 {project.githubUrl && (
                   <Link href={project.githubUrl} className="flex-1" target="_blank" rel="noopener noreferrer">
                     <Button variant={project.demoUrl ? "outline" : "primary"} size="sm" fullWidth>
-                      GitHub
+                      {project.title === "Post-Quantum Cryptography Implementation" ? "NPM Package" : "GitHub"}
                     </Button>
                   </Link>
                 )}

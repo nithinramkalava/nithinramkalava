@@ -9,7 +9,7 @@ export function AboutSection() {
       institution: 'VVIT, GUNTUR, ANDHRA PRADESH',
       period: '2021-2025',
       gpa: '8.26/10',
-      description: 'Gained a strong foundation in computer science principles, software engineering, and programming with a focus on web development, data structures, algorithms, and cryptography.'
+      description: 'Gained a strong foundation in computer science fundamentals, data structures, algorithms, OOP, database management, and specialized knowledge in AI, ML, web technologies, and cryptography.'
     },
     {
       degree: 'CLASS 12',
@@ -39,18 +39,21 @@ export function AboutSection() {
           <h3 className="text-2xl font-bold mb-4 border-b border-[var(--border)] pb-2">Who I Am</h3>
           <div className="space-y-4 text-[var(--muted-foreground)]">
             <p>
-              I&apos;m a passionate Full Stack Developer and Data Scientist with expertise in building innovative 
-              and user-friendly web applications. I specialize in machine learning, data analytics, 
-              and post-quantum cryptography with a strong foundation in both front-end and back-end technologies.
+              A passionate software engineer specializing in full-stack development, AI/ML implementation, and cryptographic security. 
+              My expertise spans Python, Java, TypeScript, React, and Next.js, with a strong foundation in database design, 
+              data engineering, and cloud technologies. As a B.Tech Computer Science student, I&apos;ve focused on creating robust 
+              applications that solve real-world problems, from AI-powered PC building platforms to post-quantum cryptography 
+              libraries with nearly 1,000 downloads.
             </p>
             <p>
-              Detail-oriented and user-focused, I&apos;m committed to creating clean, efficient code that delivers 
-              outstanding user experiences while solving complex problems. I enjoy tackling challenging 
-              projects that allow me to combine my technical skills with creative problem-solving.
+              What sets me apart is my ability to quickly master complex technical domains and deliver tangible results. 
+              Whether implementing machine learning algorithms, optimizing database performance with PL/pgSQL, or creating 
+              educational tools for underserved communities, I approach each project with curiosity, dedication, and a focus 
+              on user experience. Explore my portfolio to see live demonstrations of my projects and skills in action.
             </p>
             <p>
-              Currently pursuing my B.Tech in Computer Science, I&apos;m actively working on projects 
-              that push the boundaries of what&apos;s possible in web development and data science.
+              Outside of coding, I enjoy building custom PCs, exploring Linux environments, and contributing to educational 
+              initiatives that make technical knowledge more accessible.
             </p>
           </div>
 
@@ -61,6 +64,7 @@ export function AboutSection() {
               <Badge variant="outline">Data Science</Badge>
               <Badge variant="outline">PC Building</Badge>
               <Badge variant="outline">Cryptography</Badge>
+              <Badge variant="outline">Linux Systems</Badge>
               <Badge variant="outline">Theaters and Films</Badge>
               <Badge variant="outline">Legos</Badge>
             </div>

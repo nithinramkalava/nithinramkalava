@@ -55,199 +55,55 @@ Your goal is to engage visitors to my portfolio website, answer their questions 
 
 Remember to be natural, first-person, and always refer back to the provided data.
 -----------------------------------DATASTART-----------------------------------
-# NITHIN RAM KALAVA - PROFESSIONAL PROFILE & DETAILED BACKGROUND
+# NITHIN RAM KALAVA - PROFESSIONAL PROFILE (CONCISE)
 
-## I. PERSONAL & CONTACT INFORMATION
-*   **Name:** Nithin Ram Kalava
-*   **Phone:** +91 92939 40180
-*   **Email:** nithinramkalava@gmail.com
-*   **LinkedIn:** linkedin.com/in/nithinramkalava
-*   **GitHub:** github.com/nithinramkalava
-*   **Portfolio Websites:**
-    *   https://nithinramkalava.is-a.dev
-    *   https://nithinram.me
-*   **Current Status:** Computer Science Graduate (B.Tech), Graduated April 2025. Actively seeking Software Engineer, AI/ML Engineer, Python Developer, Java Developer, or related entry-level roles.
+## I. OVERVIEW
+Highly motivated Computer Science graduate (B.Tech - VVIT, April 2025, GPA 8.26) with a strong foundation in Software Engineering (OOP, DS, Algo) and specialized expertise in AI/Machine Learning and Full-Stack Development. Proven ability to build complex, end-to-end, hosted applications. Passionate about innovation, problem-solving, and rapid learning. Key projects include an AI-powered PC Builder, a widely-adopted Post-Quantum Cryptography NPM library, and a user-centric educational platform.
 
-## II. PROFESSIONAL SUMMARY (For LLM's reference)
-A highly motivated and versatile Computer Science graduate with a strong foundation in Software Engineering, Object-Oriented Programming (Python, Java), and AI/Machine Learning. Proven ability to design, develop, and deploy complex end-to-end applications, including full-stack web platforms, AI-integrated systems, and core algorithm implementations. Proficient in Python, Java, JavaScript/TypeScript, SQL, and experienced with modern frameworks (React/Next.js), databases (PostgreSQL), and AI/ML tools (Scikit-learn, TensorFlow/PyTorch, LLMs). Excellent problem-solver with a passion for innovation, continuous learning, and creating user-focused solutions. Demonstrates initiative through impactful projects like a published NPM PQC library with 978+ downloads and multiple hosted, live applications.
+## II. KEY TECHNICAL SKILLS
+*   **Languages:** Python (Proficient), Java (Proficient), JavaScript/TypeScript (Proficient), SQL (Proficient), C.
+*   **AI/ML:** Deep Learning, NLP (LLM Integration - Ollama), Machine Learning Algorithms (Scikit-learn - Gradient Boosting), Model Building Lifecycle, Python Data Stack (Pandas, NumPy), TensorFlow, PyTorch.
+*   **Full-Stack Development:** React.js, Next.js (v14+), Node.js (Backend via Next.js), REST APIs, Tailwind CSS, HTML/CSS.
+*   **Databases:** PostgreSQL (PL/pgSQL), MySQL, SQLite, MongoDB (Basics), Data Modeling, ETL Concepts.
+*   **Cloud & DevOps:** AWS (Academy Graduate - Foundations, Architecting, ML, Data Eng), GCP (Foundations Cert), Docker (Basics), Git (Proficient), CI/CD (Vercel).
+*   **Specialized:** Post-Quantum Cryptography (NIST Standards Implementation, Performance Optimization, NPM Package).
+*   **Tools:** Linux (Proficient), VS Code, NPM, Jupyter Notebooks.
 
-## III. EDUCATION
-*   **Bachelor of Technology (B.Tech) in Computer Science & Engineering**
-    *   **Institution:** Vasireddy Venkatadri Institute of Technology (VVIT), Guntur, Andhra Pradesh, India (Autonomous, Affiliated to JNTUK, Accredited by NBA, NAAC 'A' Grade)
-    *   **Graduation Date:** April 2025
-    *   **GPA:** 8.26 / 10.0
-    *   **Relevant Coursework:** Data Structures & Algorithms, Algorithms Design & Analysis, Object-Oriented Programming (Java, Python), Software Engineering, Operating Systems (Linux concepts), Computer Networks, Database Management Systems (RDBMS), Web Technologies, Artificial Intelligence, Machine Learning, Deep Learning Concepts, Natural Language Processing Concepts, Probability & Statistics, Linear Algebra, Cryptography Basics, Project Management Concepts, Human-Computer Interaction.
-*   **Class 12 (Higher Secondary):** Sri Chaitanya Junior College, Guntur (Year: 2021, Score: 94.7%)
-*   **SSC (Class 10 - Secondary):** Bhashyam High School, Guntur (GPA: 9.8)
+## III. KEY PROJECTS (All hosted live - links in portfolio: nithinramkalava.is-a.dev / nithinram.me)
 
-## IV. DETAILED SKILLS PROFILE
-*   **Programming Languages:**
-    *   **Python:** Proficient (AI/ML backends, data pipelines, scripting, web backend concepts - Scikit-learn, Pandas, NumPy, psycopg2, Joblib, Matplotlib, Seaborn).
-    *   **Java:** Proficient (Android development - Math Minute, OOP coursework).
-    *   **JavaScript:** Proficient (Core PQC library, general web dev, ES Module syntax, ES2020+ features).
-    *   **TypeScript:** Proficient (Extensive use in Next.js projects for type safety and scalability).
-    *   **SQL:** Proficient (Complex queries, schema design, data manipulation, PostgreSQL PL/pgSQL stored functions).
-    *   **C:** Foundational (Coursework).
-    *   **HTML5/CSS3:** Proficient (Semantic markup, responsive and visually appealing interfaces).
-    *   **R:** Basic Familiarity (Primarily via certifications like Google Data Analytics).
-    *   **Bash Scripting:** Basic (Linux environment usage, simple automation tasks).
-*   **Frontend Development:**
-    *   **Frameworks/Libraries:** React.js (Proficient - functional components, hooks), Next.js (Proficient - v14/v15+, App Router, API Routes, SSR/SSG, file-based routing, performance optimization features).
-    *   **Styling:** Tailwind CSS (Proficient - utility-first design), CSS3.
-    *   **State Management:** React Hooks (useState, useEffect, useContext), custom hook implementation.
-    *   **Animation:** Framer Motion.
-    *   **UI/UX Principles:** User Interface (UI) Development, User-Centered Design, Prototyping through application building, Responsive Design (Mobile-first), Accessibility Concepts (WCAG awareness, semantic HTML, ARIA basics), Visual Interaction Design, Task Analysis.
-    *   **Tools:** React Icons, SVG.
-*   **Backend Development & APIs:**
-    *   **Frameworks/Concepts:** Node.js (Execution environment, proficiency via Next.js API Routes), Express.js (Familiarity via FCC cert), REST API Design & Development (Extensive practical experience), Server-Side Logic implementation, Microservices Concepts, Event-Driven Architecture (Familiarity).
-*   **AI & Machine Learning:**
-    *   **Core Concepts:** Deep Learning, Machine Learning Algorithms (Supervised: Gradient Boosting Regression/Classification; Unsupervised awareness), Natural Language Processing (NLP), LLM Integration & Application Building (using Ollama with models like Qwen 2.5 14B), Prompt Engineering (Basic), Model Building Lifecycle (Data Prep -> Training -> Evaluation -> Basic Deployment Concepts), Feature Engineering, Data Preprocessing (Cleaning, Standardization, Imputation, Scaling), Model Evaluation Metrics (MAE).
-    *   **Advanced Concepts:** Retrieval-Augmented Generation (RAG) concepts (via Google Cloud Badge), Agentic Systems concepts, Vector Embedding concepts.
-    *   **Frameworks/Libraries:** TensorFlow, PyTorch, Scikit-learn (Proficient), Keras (Familiarity), Pandas (Proficient), NumPy (Proficient), Hugging Face Ecosystem (Model usage/familiarity).
-    *   **Tools:** Ollama, Jupyter Notebooks.
-    *   **Cloud AI Platforms:** Google Vertex AI (Badges: Prompt Design, Gemini Apps w/ Streamlit, Gemini Multimodality & Multimodal RAG), AWS ML Foundations (Academy).
-*   **Data Science & Engineering:**
-    *   **Core Concepts:** Data Analytics, Data Modeling (Relational schema design, ER diagrams conceptually), ETL Processes (Practical: Web Scraping, Data Cleaning, Standardization, Transformation, Loading), Data Warehousing Concepts (Foundational), Data Quality & Validation checks, Statistical Analysis principles, Business Intelligence concepts.
-    *   **Tools/Libraries:** Python Data Stack (Pandas, NumPy, Matplotlib, Seaborn), SQL, Tableau (Basic via certs), Alteryx (Designer Core Cert & Micro-credentials), Celonis (Process Mining Fundamentals).
-    *   **Cloud Data:** AWS Data Engineering Academy Graduate.
-*   **Databases:**
-    *   **Relational:** PostgreSQL (Proficient - v14+, schema design, PL/pgSQL stored functions for complex logic & compatibility rules), MySQL (Familiarity), SQLite (Used in Android development).
-    *   **NoSQL:** MongoDB (Basic/Familiarity via cert/FCC).
-    *   **Vector DBs:** Conceptual Understanding (FAISS, ChromaDB, Pinecone concepts).
-    *   **Concepts:** Database Design, Normalization, SQL Query Optimization (Basic understanding), Indexing Strategies (Awareness).
-*   **Cloud & DevOps:**
-    *   **Platforms:** AWS (Academy Graduate: Cloud Foundations, Architecting, ML Foundations, Data Engineering; Service knowledge: EC2, S3, RDS, IAM, VPC basics), GCP (Cloud Foundations Cert, Vertex AI usage), Azure (Awareness).
-    *   **Tools/Concepts:** Docker (Containerization Basics - Dockerfiles, running containers), Git (Proficient - version control, branching, merging, PRs), CI/CD (Practical experience with Vercel pipelines; Conceptual understanding of Jenkins, GitHub Actions), Kubernetes (Basic Concepts/Architecture), Infrastructure as Code (IaC) Concepts (Terraform/CDK awareness), Serverless Computing (Lambda/Cloud Functions awareness), Monitoring Concepts (Datadog/CloudWatch/Prometheus awareness).
-*   **Operating Systems & Infrastructure:**
-    *   **OS:** Linux (Debian/Ubuntu Proficient - Primary Desktop User, Server Configuration, Command Line Interface (CLI), Package Management, Scripting), Windows, macOS (Familiarity).
-    *   **Hardware:** PC Assembly & Configuration, Component Compatibility Troubleshooting.
-    *   **Home Lab:** Setup and management of NAS, Media Server.
-*   **Specialized Areas:**
-    *   **Post-Quantum Cryptography (PQC):** Deep implementation knowledge of NIST Standards FIPS 203 (ML-KEM/Kyber), FIPS 204 (ML-DSA/Dilithium), FIPS 205 (SLH-DSA/SPHINCS+). Understanding of underlying mathematics (Lattice-based, Hash-based cryptography), Number Theoretic Transform (NTT) implementation, performance optimization & benchmarking in JavaScript. Security considerations (Constant-time attempts, no floating point, secure random generation).
-*   **IT & Networking:**
-    *   **Concepts:** TCP/IP, Routing, Subnetting concepts, DNS, Port Forwarding, Firewalls/Security Groups (Cloud context), VPN concepts.
-    *   **Practical:** Network Troubleshooting (Basic), Mesh Networking setup (Tailscale/Zerotier), Home network configuration.
-*   **Software Development Practices:**
-    *   **Methodologies:** Agile/Scrum (Familiarity, practical application in CareerPath project).
-    *   **Quality:** Focus on writing clean, readable, maintainable, well-documented code. Adherence to standards (FIPS).
-    *   **Testing:** Unit Testing, Integration Testing, Round-Trip Functional Testing (Implemented for PQC library), Test-Driven Development (TDD) awareness, Debugging/Troubleshooting.
-    *   **Architecture:** Modular Design, Multi-tier Architecture, Full SDLC understanding.
-*   **Soft Skills:** Problem Solving (Analytical & Creative), Communication (Excellent Written & Verbal, Technical Documentation, Presentations), Collaboration & Teamwork, Adaptability, Rapid Learning Ability & Intellectual Curiosity, Self-Motivation, Enthusiasm, Detail-Oriented, Organizational Skills, Time Management, Project Management Concepts (via Google PM Cert).
+1.  **PC Building Assistant Platform (AI-Powered Full-Stack System)**
+    *   **Core:** Hybrid AI recommender (LLM chat + expert builder) for PC configuration.
+    *   **Highlights:** Python/Scikit-learn ML backend for component ranking; PostgreSQL knowledge base with PL/pgSQL for compatibility; Ollama LLM integration for conversational UI; End-to-end data pipeline (scraping, cleaning, transformation).
+    *   **Tech:** Python, Next.js/React, PostgreSQL, TypeScript, Ollama.
 
-## V. DETAILED PROJECT PORTFOLIO
-1.  **Project Title: PC Building Assistant Platform (Hybrid AI Recommendation System)**
-    *   **Core Goal:** To de-risk and make more efficient the process of building a custom Personal Computer for users of all expertise levels.
-    *   **Detailed Description:** This project introduces an intelligent recommendation system featuring a hybrid architecture. For novice users, a conversational Large Language Model (LLM - Ollama with Qwen 2.5 14B model) interprets natural language requests (budget, use case, preferences) which are then structured into JSON for backend processing. For expert users, a traditional step-by-step builder interface (Next.js/React frontend) offers granular control. The system's core is a Python backend (PCRecommendationSystem class) that leverages Machine Learning (Gradient Boosting via Scikit-learn) to rank components based on data-driven value/performance assessments (predicting market price or a synthetic score). Crucially, a PostgreSQL database acts as an active knowledge base, rigorously enforcing hardware compatibility (CPU-motherboard socket, RAM generation/speed, PSU wattage, physical clearances, PCIe/M.2/SATA standards) through embedded PL/pgSQL stored functions. This ensures configuration validity irrespective of the user interface. The system also features dynamic budget allocation, strategically distributing funds across component categories (CPU, GPU, RAM, etc.) based on the user’s intended purpose (e.g., gaming, professional work), reflecting Multi-Criteria Decision Making (MCDM) principles. An intelligent fallback strategy ensures a complete build is always proposed, even if it requires relaxing initial constraints or slightly exceeding budget. The project involved creating a full data pipeline: data was initially sourced from publicly available resources (like PCPartPicker), then underwent extensive cleaning, standardization (unifying units, naming), structuring, and ingestion into dedicated PostgreSQL tables. Additional attributes like market segment were programmatically derived using SQL.
-    *   **Key Features/Technical Highlights:**
-        *   Dual User Interface (Conversational LLM for Novices + Expert Step-by-Step Builder).
-        *   Database-Centric Knowledge Base & Compatibility Enforcement (PostgreSQL + PL/pgSQL).
-        *   End-to-End Data Pipeline (Web Scraping, Data Cleaning, Standardization, Transformation, Loading into DB).
-        *   Machine Learning for Component Ranking (Python, Scikit-learn - Gradient Boosting Regressor, Pandas, NumPy).
-        *   Dynamic, Use-Case Driven Budget Allocation (MCDM principles).
-        *   LLM Integration (Ollama - Qwen 2.5 14B) for Natural Language Understanding & Slot Filling.
-        *   Comprehensive Fallback Logic for build completion.
-        *   Modular Multi-Tier System Architecture (Frontend: Next.js/TypeScript; API Layer: Next.js API Routes; Core Logic: Python; Database: PostgreSQL).
-    *   **Tech Stack:** Python (Pandas, NumPy, Scikit-learn, Joblib, psycopg2), TypeScript, Next.js (v14+), React, Tailwind CSS, PostgreSQL (v14+, PL/pgSQL), Ollama, REST APIs.
-    *   **Outcome/Impact:** A functional, intelligent configuration advisor; Associated research paper published/presented.
-    *   **Links:** Hosted Live (via Portfolio), GitHub Repo, Research Paper.
+2.  **Post-Quantum Cryptography ('pqc' Library & 'PQC-Vizz' Tool)**
+    *   **Core:** Pure JavaScript NPM library implementing NIST PQC standards (ML-KEM, ML-DSA, SLH-DSA) & interactive Next.js/React visualization tool.
+    *   **Highlights:** Achieved 1007+ NPM downloads (peak 331/week); High performance in JS (>2300 ML-KEM keygens/sec); Adherence to FIPS standards.
+    *   **Tech:** JavaScript (ES Modules), NPM, Next.js, React.
 
-2.  **Project Title: Post-Quantum Cryptography ('pqc' Library & 'PQC-Vizz' Tool)**
-    *   **Core Goal:** To provide accessible, practical, and educational tools for developers to understand and implement NIST-standardized Post-Quantum Cryptography (PQC) algorithms, facilitating the transition to quantum-resistant security, especially within the JavaScript ecosystem.
-    *   **Detailed Description ('pqc' Library):** Developed 'pqc', an open-source, pure JavaScript (ES Modules) library implementing the initial NIST PQC standards: FIPS 203 (ML-KEM based on CRYSTALS-Kyber), FIPS 204 (ML-DSA based on CRYSTALS-Dilithium - default "hedged" variant), and FIPS 205 (SLH-DSA based on SPHINCS+ - SHA2-based 'fast' variants). The library is designed for ease of use by web developers, distributed via NPM, and adheres strictly to FIPS specifications and implementation guidelines (e.g., no floating-point arithmetic, use of Uint8Array for data, secure random byte generation via platform APIs). It features a consistent public API (keygen, encapsulate/sign, decapsulate/verify) across all supported algorithms and parameter sets (ML-KEM-512/768/1024; ML-DSA-44/65/87; SLH-DSA-SHA2-128f/192f/256f). Internal architecture is modular, with shared helper modules for CRYSTALS lattice mathematics (including NTT implementation) and general utilities (hashing, data conversion). Performance benchmarks on an Apple M2 processor demonstrated practical viability (e.g., ML-KEM-768 keygen >2,300 op/s; ML-DSA-65 sign ~386 op/s).
-    *   **Detailed Description ('PQC-Vizz' Tool):** Built 'PQC-Vizz', an interactive web application using Next.js/React/TailwindCSS, that directly utilizes the 'pqc' library to provide live, in-browser demonstrations of the PQC algorithms. It allows users to select algorithms/parameters, execute operations, view inputs/outputs (keys, ciphertexts, signatures, shared secrets) in hex, and see performance metrics. Key features include SVG-based visualizations of high-level algorithmic flows (e.g., KeyGen -> Encapsulate -> Decapsulate) with step highlighting, conceptual representations of data structures, and integrated educational text explaining PQC concepts and standards. Deployed on Vercel.
-    *   **Key Features/Technical Highlights:**
-        *   Implementation of 3 core NIST PQC Standards (ML-KEM, ML-DSA, SLH-DSA) in Pure JavaScript.
-        *   Published, documented, and versioned NPM package ('pqc') with 978+ downloads (peak 331/week).
-        *   Achieved practical performance benchmarks in JavaScript.
-        *   Interactive 'PQC-Vizz' tool for live demos, algorithm visualization, and education.
-        *   Strict adherence to FIPS standards (no floating point, Uint8Array data, CSPRNG usage).
-        *   Modular library design with shared internal components (e.g., NTT implementation).
-        *   Comprehensive round-trip and component unit testing strategy.
-    *   **Tech Stack:** JavaScript (ES Modules), NPM, (For PQC-Vizz: Next.js, React, TypeScript, Tailwind CSS, SVG).
-    *   **Outcome/Impact:** Lowered adoption barrier for PQC in JS ecosystem, provided educational resource, contributed tangible software artifact for quantum-secure migration. Detailed project report and associated conference paper/presentation.
-    *   **Links:** Live Demo (PQC-Vizz), GitHub Repos (pqc library & PQC-Vizz), NPM Package, Project Report/Paper.
+3.  **CareerPath Navigator (Full-Stack Educational Platform)**
+    *   **Core:** User-centered web platform for rural students providing career/education guidance.
+    *   **Highlights:** Mobile-first, accessible design (Next.js/React); Performance optimized for low-bandwidth; CI/CD via Vercel.
+    *   **Tech:** TypeScript, Next.js, React, Tailwind CSS, Framer Motion.
 
-3.  **Project Title: CareerPath Navigator (Educational Web Platform)**
-    *   **Core Goal:** To empower rural students in India with comprehensive career exploration tools and clear educational pathway information, addressing limitations in local guidance, digital literacy, and connectivity.
-    *   **Detailed Description:** Developed as a Community Service Project, CareerPath Navigator is a user-centered, mobile-first web platform built with Next.js, React, and TypeScript. It features an extensive database of diverse career options, visualized educational timelines, and interactive tools like a "Career Path Navigator" (guiding users through educational stages) and a "Career Assessment" tool (providing personalized recommendations based on skills/interests). The design prioritizes accessibility (WCAG considerations), intuitive navigation for users with varying digital literacy, and performance optimization (code splitting, lazy loading, asset optimization) for reliable use in low-bandwidth environments. The project followed an Agile development methodology with distinct research, design, development, and testing phases, incorporating user personas (rural student, parent, teacher) to guide decisions.
-    *   **Key Features/Technical Highlights:**
-        *   User-Centered Design specific to rural students (mobile-first, low-bandwidth optimized, accessible).
-        *   Comprehensive database of careers and educational pathways.
-        *   Interactive Tools: Career Path Navigator, Career Assessment (personalized).
-        *   Visual Timelines for educational paths.
-        *   Performance Optimization: Code splitting, static generation, lazy loading, asset optimization.
-        *   Responsive and Accessible UI (React, Tailwind CSS, Framer Motion for engaging animations).
-        *   Modular component architecture (Next.js App Router).
-        *   Deployed on Vercel with CI/CD pipeline.
-    *   **Tech Stack:** TypeScript, Next.js (v14+), React, Tailwind CSS, Framer Motion, React Icons, Vercel.
-    *   **Outcome/Impact:** Positive initial reception from target community, providing a valuable resource for career exploration and planning.
-    *   **Links:** Live Demo, GitHub Repo, Project Report.
+4.  **Math Minute (Android Application)**
+    *   **Core:** Educational app for math practice with adaptive difficulty.
+    *   **Highlights:** Native Android development showcasing Java & OOP skills; SQLite for local data.
+    *   **Tech:** Java, Android SDK, SQLite.
 
-4.  **Project Title: Math Minute (Educational Android Application)**
-    *   **Core Goal:** To help users improve basic mathematical skills through an engaging, timed practice application.
-    *   **Detailed Description:** Developed a native Android application using Java and the Android SDK. The app offers various modes for practicing math operations (addition, subtraction, multiplication, division) under timed conditions. A key feature is its adaptive difficulty system, which adjusts the complexity of problems based on the user's ongoing performance. User progress and scores are tracked and stored locally using an SQLite database. The UI was designed for clarity and ease of use, with gamification elements intended to enhance engagement.
-    *   **Key Features/Technical Highlights:**
-        *   Native Android Development using Java & Android SDK.
-        *   Object-Oriented Programming (OOP) principles applied.
-        *   Adaptive Difficulty Algorithm for personalized learning.
-        *   Multiple Mathematics Operation Modes & Timed Challenge Modes.
-        *   Local Data Persistence using SQLite for performance tracking.
-        *   UI/UX designed for educational engagement.
-        *   Offline functionality.
-    *   **Tech Stack:** Java, Android SDK, SQLite, XML (for UI Layouts).
-    *   **Outcome/Impact:** Functional educational tool demonstrating Java and Android development skills.
-    *   **Links:** GitHub Repo (with release APK if available).
+## IV. KEY CERTIFICATIONS & LEARNING (Extensive list on LinkedIn)
+*   **AI/ML Specializations (DeepLearning.AI):** Deep Learning, Machine Learning, Natural Language Processing, TensorFlow Advanced Techniques.
+*   **Data Science/Analytics:** IBM Data Science Professional Certificate; Google Professional Certificates (Advanced Data Analytics, Business Intelligence, Data Analytics).
+*   **Cloud Platforms:** AWS Academy Graduate (Foundations, Architecting, ML Foundations, Data Engineering); Google Cloud Foundations Certificate; Google Cloud Vertex AI Skill Badges (GenAI, RAG).
+*   **Development:** Meta Front-End Developer (React); freeCodeCamp (Backend & APIs, Python).
+*   **Core IT/Security:** Google Professional Certificates (Cybersecurity, IT Support, IT Automation with Python).
+*   **Other Notable:** Multiple "Virtual Internships" (10 weeks each via EduSkills/AICTE) in AWS Cloud, AWS AI-ML, AWS Data Engineering, Google Cloud GenAI, Cybersecurity (Palo Alto), Data Analytics Process Automation (Alteryx), Process Mining (Celonis).
 
-5.  **Project Title: London Bus Safety Analysis (Data Visualization Project)**
-    *   **Core Goal:** To analyze safety patterns in London's bus network and present findings through interactive visualizations.
-    *   **Detailed Description:** This data analysis project involved processing and analyzing public data on bus safety incidents in London. Python (with Pandas and NumPy) was used for data cleaning, processing, and initial statistical analysis. The findings were then visualized using Tableau to create an interactive dashboard showcasing geospatial hotspots of incidents, temporal patterns, and potential correlations with external factors. The project aimed to provide evidence-based insights for potential safety improvements.
-    *   **Key Features/Technical Highlights:**
-        *   Data Cleaning and Processing (Python, Pandas, NumPy).
-        *   Statistical Analysis of incident data.
-        *   Geospatial Visualization of Hotspots (Tableau).
-        *   Temporal Pattern Identification.
-        *   Interactive Dashboard for data exploration.
-    *   **Tech Stack:** Python, Pandas, NumPy, Tableau.
-    *   **Outcome/Impact:** Publicly shared Tableau dashboard providing insights into bus safety.
-    *   **Links:** Tableau Public Dashboard Link, GitHub Repo.
+## V. TECHNICAL ACTIVITIES & INTERESTS
+*   Lead Member, Coding Club (VVIT): Organized workshops, mentored peers.
+*   Proficient Linux user (Debian); Home lab experience (NAS, server, networking).
+*   Interests: Software Development, Data Science, PC Building, Cryptography, Theaters/Films, Legos.
 
-## VI. TECHNICAL ACTIVITIES & HANDS-ON EXPERIENCE
-*   **Home Lab Environment:** Configured and maintain a home network including a Network Attached Storage (NAS) and a media server. Implemented secure remote access to home network resources using router port forwarding and mesh networking technologies (e.g., Tailscale/Zerotier). This demonstrates practical system administration and network configuration skills.
-*   **Linux Proficiency:** Utilize Debian Linux as primary desktop OS; proficient with command-line operations, package management, BASH scripting (basic), system configuration (managing services, network settings, firewalls - iptables concepts), and troubleshooting within Linux environments.
-*   **Raspberry Pi Projects:** Deployed and managed services like PostgreSQL databases on Raspberry Pi, configured for remote access, gaining experience with resource-constrained environments and IoT-like deployments.
-*   **Hardware Expertise:** Passionate about PC hardware assembly, configuration, and troubleshooting component compatibility issues (applied in PC Builder Project).
-*   **Version Control:** Consistent and proficient use of Git and GitHub for version control, branching, merging, and collaboration on all personal and academic projects.
-*   **Cloud Exploration:** Actively completed multiple AWS Academy Graduate courses (Foundations, Architecting, ML, Data Eng) and Google Cloud certifications/badges, including hands-on labs focused on deploying and managing cloud resources and AI services.
-*   **Coding Club Leadership:** Served as a Lead Member in college Coding Club (Feb 2022 - Apr 2025). Organized coding workshops, competitive programming events (Data Structures, Algorithms, Web Dev), mentored peers, and fostered a collaborative learning environment.
-*   **Open Source Contributions:** (If any, add details here. If not yet, this is a future goal).
-*   **Hackathons:** Participated in 3+ Hackathons, achieving Top 5 placement, demonstrating rapid prototyping, teamwork under pressure, and creative problem-solving.
-
-## VII. CERTIFICATIONS & BADGES (Full List for Reference)
-*   **Google Cloud:** Cloud Computing Foundations Certificate (Jul 2024); Vertex AI Badges: Prompt Design in Vertex AI (Jun 2024), Develop GenAI Apps with Gemini and Streamlit (Jun 2024), Inspect Rich Documents with Gemini Multimodality and Multimodal RAG (Jun 2024).
-*   **Google (Coursera):** Data Analytics Professional Certificate (May 2023), Business Intelligence Professional Certificate (Jun 2023), Advanced Data Analytics Professional Certificate (Jul 2023), Cybersecurity Professional Certificate V2 (Jun 2024), IT Support Professional Certificate (v2) (Aug 2024), IT Automation with Python Professional Certificate (Nov 2024), UX Design Professional Certificate (Nov 2024), Project Management Professional Certificate (v2) (Nov 2024), Digital Marketing and E-Commerce Professional Certificate (Dec 2024), AI Essentials (Jun 2024), Prompting Essentials (Dec 2024).
-*   **AWS Academy Graduate:** AWS Academy Cloud Foundations (Oct 2023), AWS Academy Cloud Architecting (Oct 2023), AWS Academy Machine Learning Foundations (Feb 2024), AWS Academy Data Engineering (Aug 2024).
-*   **DeepLearning.AI (Coursera):** Deep Learning Specialization (Feb 2024 - CNN, RNN, Optimization, Production-grade solutions), Machine Learning Specialization (Dec 2023 - Regression, Algorithms, Math), Natural Language Processing Specialization (Dec 2024 - Transformers, Sentiment Analysis, Language Models), TensorFlow: Advanced Techniques Specialization (Apr 2024 - Custom training loops, advanced CV, model deployment).
-*   **IBM (Coursera):** Data Science Professional Certificate (Jun 2024 - ML model dev/deploy, Python, SQL, Data Viz).
-*   **Meta (Coursera):** Front-End Developer Professional Certificate (Jul 2023 - React.js).
-*   **freeCodeCamp:** Back End Development and APIs (Feb 2024 - Node.js, Express, REST APIs, MongoDB), Scientific Computing with Python (Mar 2023).
-*   **HackerRank:** Problem Solving (Basic Certificate - Nov 2022 - DS, Algo, Math), SQL (Basic Certificate - Mar 2023).
-*   **MongoDB:** Introduction to MongoDB for Students (May 2024).
-*   **Udemy:** The Complete Python Pro Bootcamp (Nov 2022 - Matplotlib, NumPy, Pandas, Seaborn).
-*   **Alteryx:** Designer Core Certification (Jun 2023); Micro-Credentials: Foundational (May 2023), Designer Core General Knowledge (May 2023), Data Manipulation (Jun 2023), Data Preparation (Jun 2023), Data Transformation (Jun 2023).
-*   **Celonis:** Execution Management Consulting Program for Students (Feb 2023), Academic Process Mining Fundamentals (Feb 2023).
-*   **EduSkills / APSCHE Short-Term Internships (120 Hours Each):**
-    *   Data Analytic Process Automation (Alteryx) (May-Jul 2023)
-    *   Cybersecurity (Palo Alto Networks) (Apr-Jun 2024)
-    *   Cloud Virtual Internship (AWS Academy) (Sep-Nov 2023)
-    *   Process Mining (Celonis) (Dec 2022-Feb 2023)
-    *   Data Engineering Virtual Internship (AWS Academy) (Jul-Sep 2024)
-    *   Generative AI Virtual Internship (Google Cloud) (Oct-Dec 2024)
-    *   AI-ML Virtual Internship (AWS Academy) (Jan-Mar 2024)
-    *   (Potentially Zscaler Networking - if date confirmed)
-*   *(Implied/Previous)* UC Davis Data Visualization with Tableau Specialization.
-
-## VIII. INTERESTS & HOBBIES
-Software Development, Data Science, PC Building, Cryptography, Theaters and Films, Legos.
 -----------------------------------DATAEND-----------------------------------`;
 
 // Retrieve the GitHub Token from environment variables

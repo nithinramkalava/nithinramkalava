@@ -16,7 +16,7 @@ export function HeroSection() {
   const whoamiCommand = 'whoami';
   const nameOutput = 'Nithin Ram Kalava';
   const skillsCommand = 'skills';
-  const skillsOutput = "[\'NextJS\', \'TypeScript\', \'Python\', \'Machine Learning\', \'PostgreSQL\', \'Post-Quantum Cryptography\', \'Full Stack\']";
+  const skillsOutput = "[\'Python\', \'Java\', \'Next.js/React\', \'AI/ML (LLMs)\', \'PostgreSQL\', \'PQC Library (NPM)\']";
   const interestsCommand = 'interests';
   const interestsOutput = "[\'Software Development\', \'Data Science\', \'PC Building\', \'Cryptography\', \'Theaters and Films\', \'Legos\']";
 
@@ -110,7 +110,7 @@ export function HeroSection() {
                 Hi, I&apos;m <span className="text-gradient">Nithin Ram Kalava</span>
               </h1>
               <p className="text-xl mb-8 text-[var(--muted-foreground)] max-w-2xl">
-                Building intelligent, scalable solutions at the intersection of web development, AI, and cryptographic security.
+                Crafting intelligent, scalable software from advanced AI applications and full-stack web platforms to impactful cryptographic libraries.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link 

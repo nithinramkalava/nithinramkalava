@@ -8,22 +8,22 @@ export function AboutSection() {
       degree: 'B.TECH. in COMPUTER SCIENCE',
       institution: 'VVIT, GUNTUR, ANDHRA PRADESH',
       period: '2021-2025',
-      gpa: '8.26/10',
-      description: 'Gained a strong foundation in computer science fundamentals, data structures, algorithms, OOP, database management, and specialized knowledge in AI, ML, web technologies, and cryptography.'
+      gpa: '8.28/10',
+      description: 'My college journey where I not only mastered the CS fundamentals but also developed a passion for AI/ML and web development. Spent countless sleepless nights building projects that I actually cared about!'
     },
     {
       degree: 'CLASS 12',
       institution: 'SRI CHAITANYA JUNIOR College, GUNTUR',
       period: '2021',
       gpa: '94.7%',
-      description: 'Completed high school education with a focus on Mathematics, Physics, and Chemistry.'
+      description: 'Those two intense years where I juggled PCM subjects and discovered my love for coding. Made some great friends and gained the discipline that still helps me today.'
     },
     {
-      degree: 'SSC – CLASS 10',
+      degree: 'SSC - CLASS 10',
       institution: 'BHASHYAM HIGH SCHOOL, GUNTUR',
       period: '2019',
       gpa: '9.8/10',
-      description: 'Completed secondary education with excellent academic performance.'
+      description: 'Where it all began! Got my first taste of programming here and never looked back. Those were simpler times, but they laid the foundation for everything that followed.'
     }
   ];
 
@@ -31,7 +31,7 @@ export function AboutSection() {
     <Section 
       id="about" 
       title="About Me" 
-      subtitle="Get to know more about me, my background, and what drives me."
+      subtitle="A little backstory on who I am and what makes me tick."
       subtitleAlignment="left"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -39,21 +39,16 @@ export function AboutSection() {
           <h3 className="text-2xl font-bold mb-4 border-b border-[var(--border)] pb-2">Who I Am</h3>
           <div className="space-y-4 text-[var(--muted-foreground)]">
             <p>
-              A passionate software engineer specializing in full-stack development, AI/ML implementation, and cryptographic security. 
-              My expertise spans Python, Java, TypeScript, React, and Next.js, with a strong foundation in database design, 
-              data engineering, and cloud technologies. As a B.Tech Computer Science student, I&apos;ve focused on creating robust 
-              applications that solve real-world problems, from AI-powered PC building platforms to post-quantum cryptography 
-              libraries with nearly 1,000 downloads.
+              Hey there! I&apos;m a software engineer who loves diving into diverse tech challenges. I&apos;ve spent the last few years getting my hands dirty with everything from full-stack web apps to AI systems and cryptography. I work primarily with Python, Java, and TypeScript, but I&apos;m always eager to pick up new languages and frameworks when the project calls for it.
             </p>
             <p>
-              What sets me apart is my ability to quickly master complex technical domains and deliver tangible results. 
-              Whether implementing machine learning algorithms, optimizing database performance with PL/pgSQL, or creating 
-              educational tools for underserved communities, I approach each project with curiosity, dedication, and a focus 
-              on user experience. Explore my portfolio to see live demonstrations of my projects and skills in action.
+              I just wrapped up my B.Tech degree in Computer Science this spring (2025), but I&apos;ve been building real-world apps throughout my studies. I&apos;m particularly proud of my PC Builder platform that uses AI to help people choose compatible components, and my JavaScript post-quantum crypto library that&apos;s been downloaded over 1,000 times on NPM. Those projects weren&apos;t just academic exercises—they solved actual problems I cared about.
             </p>
             <p>
-              Outside of coding, I enjoy building custom PCs, exploring Linux environments, and contributing to educational 
-              initiatives that make technical knowledge more accessible.
+              What gets me excited? Learning complex concepts quickly and turning them into something useful. I&apos;m not just interested in writing code that works; I want to create solutions that make a difference. Whether I&apos;m tweaking database performance with custom PL/pgSQL functions or designing intuitive UIs, I always keep the end user in mind.
+            </p>
+            <p>
+              When I&apos;m not at the keyboard, you&apos;ll find me building custom PCs (yes, the GPU shortage!), tinkering with Linux distros, or catching the latest sci-fi film. I&apos;m also passionate about making tech knowledge more accessible—we all start somewhere, right?
             </p>
           </div>
 
@@ -90,4 +85,4 @@ export function AboutSection() {
       </div>
     </Section>
   );
-} 
+}

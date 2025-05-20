@@ -15,7 +15,7 @@ export function ChatSection() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: "Hi there! I'm Virtual Nithin. Ask me anything about my skills, experience, or interests!"
+      content: "Hey! Nithin here (well, a digital version of me). What would you like to know about my projects or background? Happy to chat about anything!"
     }
   ]);
   const [isLoading, setIsLoading] = useState(false);
@@ -138,14 +138,14 @@ export function ChatSection() {
   const getEmojiDescription = () => {
     switch(memojiState) {
       case 'greeting': 
-        return "Hey there! I'm happy to help!";
+        return "Hey! Thanks for stopping by my portfolio!";
       case 'thinking': 
-        return "Hmm, let me think about that...";
+        return "Good question... give me a sec to gather my thoughts...";
       case 'talking': 
-        return "Great question! Here's what I know...";
+        return "So about that...";
       case 'idle':
       default:
-        return "Ask me anything about Nithin's skills or experience!";
+        return "Feel free to ask about any of my projects or background!";
     }
   };
 
@@ -153,11 +153,11 @@ export function ChatSection() {
   const getExpressionText = () => {
     switch(memojiState) {
       case 'greeting':
-        return ["Hello!", "Hi there!", "Welcome!"];
+        return ["Hey!", "What's up?", "Nice to meet you!"];
       case 'thinking':
-        return ["Let me see...", "Hmm...", "One moment..."];
+        return ["Let me remember...", "Just a sec...", "Thinking..."];
       case 'talking':
-        return ["I think...", "Well...", "Actually..."];
+        return ["So here's the deal...", "Well from my experience...", "That reminds me..."];
       case 'idle':
       default:
         return [];

@@ -40,11 +40,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <Link href="/" className="text-xl font-bold">
-              Nithin <span className="text-[var(--primary)]">Ram</span>
+              Nithin <span className="text-[var(--primary)]">Ram</span> Kalava
             </Link>
             <p className="mt-4 text-[var(--muted-foreground)] max-w-md">
-              A passionate Full Stack Developer and Data Scientist specializing in innovative web applications, 
-              machine learning, and post-quantum cryptography.
+              Software engineer with a passion for creating intelligent, scalable solutions from AI-powered applications 
+              to cryptographic libraries. Always curious, always building.
             </p>
             <div className="flex mt-6 space-x-4">
               {socialLinks.map((link) => (
@@ -108,10 +108,10 @@ export function Footer() {
         
         <div className="border-t border-[var(--border)] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-[var(--muted-foreground)] text-sm">
-            © {currentYear} Nithin Ram Kalava. All rights reserved.
+            © {currentYear} Nithin Ram Kalava. Crafted by hand, not by AI.
           </p>
           <p className="text-[var(--muted-foreground)] text-sm mt-4 md:mt-0">
-            Built with <span className="text-[var(--primary)]">❤</span> using Next.js and TypeScript
+            Built with <span className="text-[var(--primary)]">❤</span> using Next.js, TypeScript & many cups of coffee
           </p>
         </div>
       </div>

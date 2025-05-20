@@ -29,7 +29,7 @@ export function SkillsSection() {
         { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg", prominent: true },
         { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", prominent: true },
       ],
-      additionalSkills: ["SQL", "HTML5", "CSS3", "Bash", "C"]
+      additionalSkills: ["SQL", "HTML5", "CSS3", "Bash", "C", "PL/pgSQL"]
     },
     {
       title: "Frontend Development",
@@ -59,7 +59,7 @@ export function SkillsSection() {
         { name: "PyTorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg", prominent: true },
         { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg", prominent: true },
       ],
-      additionalSkills: ["NumPy", "LLM Integration", "Gradient Boosting", "RAG Implementation", "Feature Engineering", "Model Evaluation"]
+      additionalSkills: ["Generative AI", "LLM Integration (Ollama)", "Pandas", "NumPy", "Deep Learning", "NLP", "Vertex AI", "Vector Search", "RAG", "Prompt Design", "Transformer Models"]
     },
     {
       title: "Data Science & Engineering",
@@ -79,7 +79,17 @@ export function SkillsSection() {
         { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", prominent: true },
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg", prominent: true },
       ],
-      additionalSkills: ["CI/CD", "Vercel", "Linux", "Version Control", "Deployment Strategies"]
+      additionalSkills: ["CI/CD (Vercel)", "Linux", "MLOps (GCP)", "Serverless (Familiarity)", "Cloud Architecture (Foundational)"]
+    },
+    {
+      title: "Core CS & SWE Principles",
+      skills: [
+        { name: "Object-Oriented Programming (OOP)", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", prominent: true },
+        { name: "Data Structures", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg", prominent: true },
+        { name: "Algorithms", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg", prominent: true },
+        { name: "Problem Solving", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg", prominent: true },
+      ],
+      additionalSkills: ["Software Development Life Cycle (SDLC)", "Code Quality & Maintainability", "Software Testing Concepts", "Agile Methodologies (Familiarity)"]
     },
     {
       title: "Specialized Knowledge",
@@ -269,9 +279,16 @@ export function SkillsSection() {
                </div>
                <h4 className="text-lg font-semibold mb-2">Google Cloud Platform</h4>
                <p className="text-center text-[var(--muted-foreground)]">
-                 Completed 50+ hands-on labs covering Machine Learning with Vertex AI, Gemini integration, 
-                 data engineering, and cloud architecture
+                 Extensive hands-on experience via 50+ labs & 30+ Google Cloud Skill Badges, focusing on Machine Learning with Vertex AI (GenAI App Dev, Multimodal RAG, MLOps, Prompt Design, Vector Search), Data Engineering, and Cloud Architecture. Gold League on Skills Boost.
                </p>
+               <a 
+                 href="https://www.cloudskillsboost.google/public_profiles/976be462-5d62-4194-8ddc-bd790ca5fa6b" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="mt-3 text-sm text-[var(--primary)] hover:underline"
+               >
+                 View Google Cloud Skills Boost Profile →
+               </a>
              </div>
              <div className="flex flex-col items-center">
                <div className="w-16 h-16 bg-[var(--card)] border border-[var(--border)] rounded-lg flex items-center justify-center mb-4">
@@ -289,8 +306,7 @@ export function SkillsSection() {
                </div>
                <h4 className="text-lg font-semibold mb-2">Amazon Web Services</h4>
                <p className="text-center text-[var(--muted-foreground)]">
-                 AWS Academy Graduate with expertise in EC2, S3, RDS, IAM and core services. Completed
-                 four Academy courses including ML Foundations and Data Engineering
+                 AWS Academy Graduate: Completed advanced coursework in Cloud Foundations, Cloud Architecting, Machine Learning Foundations, and Data Engineering, gaining expertise in core AWS services (EC2, S3, RDS, IAM).
                </p>
              </div>
            </div>

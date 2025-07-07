@@ -130,7 +130,7 @@ export function HeroSection() {
                     View My Work
                   </Button>
                 </Link>
-                <a href="/files/Nithin Ram Kalava.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/files/Nithin_Ram_s_Resume.pdf" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg">
                     Download Resume
                   </Button>

@@ -6,7 +6,7 @@
 
 ## 👨‍💻 About Me
 
-I graduated with a B.Tech in Computer Science from VVIT Guntur (Class of 2025) and spend most of my time building software that matters. My work ranges from web applications with clean interfaces to machine learning systems that solve practical problems, and even implementations of next-generation cryptography.
+I graduated with a B.Tech in Computer Science from Vasireddy Venkatadri Institute of Technology (VVIT) Guntur (Class of 2025) and spend most of my time building software that matters. My work ranges from web applications with clean interfaces to machine learning systems that solve practical problems, and even implementations of next-generation cryptography.
 
 My interests lie at the crossroads of **Full-Stack Development**, **Data Science**, and **Post-Quantum Cryptography**. There's something deeply satisfying about transforming complex concepts into working software that's both functional and elegant. I'm constantly learning and pushing my technical boundaries.
 

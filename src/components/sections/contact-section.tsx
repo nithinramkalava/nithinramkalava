@@ -25,28 +25,19 @@ export function ContactSection() {
               <div>
                 <h4 className="font-medium">Email</h4>
                 <a 
-                  href="mailto:nithinramkalava@gmail.com" 
+                  href="mailto:hello@nithinram.me" 
                   className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
                 >
-                  nithinramkalava@gmail.com
+                  hello@nithinram.me
                 </a>
               </div>
             </div>
             
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-[var(--primary)]/10 flex items-center justify-center text-[var(--primary)]">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
                 </svg>
-              </div>
-              <div>
-                <h4 className="font-medium">Phone</h4>
-                <a 
-                  href="tel:+919293940180" 
-                  className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
-                >
-                  +91 92939 40180
-                </a>
               </div>
             </div>
             
@@ -57,13 +48,7 @@ export function ContactSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                 </svg>
               </div>
-              <div>
-                <h4 className="font-medium">Location</h4>
-                <p className="text-[var(--muted-foreground)]">
-                  Guntur, Andhra Pradesh, India
-                </p>
-              </div>
-            </div>
+            </div> */}
           </div>
           
           <div className="mt-8">

@@ -6,21 +6,21 @@ export function AboutSection() {
   const educationItems = [
     {
       degree: 'B.TECH. in COMPUTER SCIENCE',
-      institution: 'VVIT, GUNTUR, ANDHRA PRADESH',
+      institution: 'Vasireddy Venkatadri Institute of Technology (VVIT), Guntur, Andhra Pradesh',
       period: '2021-2025',
       gpa: '8.28/10',
-      description: 'My college journey where I not only mastered the CS fundamentals but also developed a passion for AI/ML and web development. Spent countless sleepless nights building projects that I actually cared about!'
+      description: 'My college journey where I not only mastered the CS fundamentals but also developed a passion for AI/ML and web development. Spent countless sleepless nights building projects that I cared about!'
     },
     {
       degree: 'CLASS 12',
-      institution: 'SRI CHAITANYA JUNIOR College, GUNTUR',
+      institution: 'Sri Chaitanya Junior College, Guntur',
       period: '2021',
       gpa: '94.7%',
       description: 'Those two intense years where I juggled PCM subjects and discovered my love for coding. Made some great friends and gained the discipline that still helps me today.'
     },
     {
       degree: 'SSC - CLASS 10',
-      institution: 'BHASHYAM HIGH SCHOOL, GUNTUR',
+      institution: 'Bhashyam High School, Guntur',
       period: '2019',
       gpa: '9.8/10',
       description: 'Where it all began! Got my first taste of programming here and never looked back. Those were simpler times, but they laid the foundation for everything that followed.'

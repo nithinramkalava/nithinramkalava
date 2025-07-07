@@ -34,7 +34,7 @@ export function HeroSection() {
                   View My Work
                 </Button>
               </Link>
-              <a href="/files/Nithin Ram Kalava.pdf" download>
+              <a href="/files/Nithin_Ram_s_Resume.pdf" download>
                 <Button variant="outline" size="lg">
                   Download Resume
                 </Button>

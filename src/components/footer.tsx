@@ -87,21 +87,12 @@ export function Footer() {
             <ul className="space-y-2 text-[var(--muted-foreground)]">
               <li>
                 <a 
-                  href="mailto:nithinramkalava@gmail.com"
+                  href="mailto:hello@nithinram.me"
                   className="hover:text-[var(--primary)] transition-colors"
                 >
-                  nithinramkalava@gmail.com
+                  hello@nithinram.me
                 </a>
               </li>
-              <li>
-                <a 
-                  href="tel:+919293940180"
-                  className="hover:text-[var(--primary)] transition-colors"
-                >
-                  +91 92939 40180
-                </a>
-              </li>
-              <li>Guntur, Andhra Pradesh, India</li>
             </ul>
           </div>
         </div>

@@ -233,6 +233,18 @@ export function SkillsSection() {
              skills={["Data Science", "Machine Learning", "Python", "SQL", "Data Visualization"]}
            />
            <CertificationCard
+             title="IBM AI Developer"
+             organization="IBM"
+             date="2025"
+             skills={["AI Development", "Machine Learning", "Python", "AI Applications", "Data Analysis"]}
+           />
+           <CertificationCard
+             title="IBM AI Engineering"
+             organization="IBM"
+             date="2025"
+             skills={["AI Engineering", "Deep Learning", "Neural Networks", "TensorFlow", "Model Deployment"]}
+           />
+           <CertificationCard
              title="Meta Front-End Developer Certificate"
              organization="Meta"
              date="2024"

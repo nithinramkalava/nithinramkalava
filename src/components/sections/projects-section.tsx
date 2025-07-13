@@ -27,7 +27,7 @@ export function ProjectsSection() {
       description: "An intelligent platform that simplifies PC component selection through hybrid AI-powered recommendations and compatibility verification. Combines conversational interfaces (LLM) with traditional builder UI, backed by machine learning rankings, a comprehensive data pipeline (ETL), and a robust PostgreSQL database with embedded PL/pgSQL logic.",
       image: "/images/projects/pc-building.png",
       technologies: ["PostgreSQL", "Next.js", "Node.js", "Python", "TypeScript", "Scikit-learn", "Ollama", "Tailwind CSS", "Pandas"],
-      demoUrl: "https://pc.nithinram.me/",
+      demoUrl: "https://pc.nithinram.com/",
       githubUrl: "https://github.com/nithinramkalava/build-your-pc",
       featured: true,
       keyFeatures: [
@@ -59,7 +59,7 @@ export function ProjectsSection() {
       description: "An interactive visualization platform for post-quantum cryptographic algorithms, making complex cryptographic concepts accessible and understandable through dynamic visual representations and step-by-step execution flows.",
       image: "/images/projects/pqc-vizz.png",
       technologies: ["Next.js", "TypeScript", "SVG", "React Hooks", "Tailwind CSS", "Vercel", "pqc library"],
-      demoUrl: "https://pqc.nithinram.me/",
+      demoUrl: "https://pqc.nithinram.com/",
       githubUrl: "https://github.com/nithinramkalava/pqc-vizz",
       featured: true,
       keyFeatures: [
@@ -74,7 +74,7 @@ export function ProjectsSection() {
       description: "A user-centric digital platform empowering rural students with comprehensive career exploration tools, educational pathway visualizations, and personalized assessments, optimized for low-bandwidth environments.",
       image: "/images/projects/career-path-navigator.png",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "React Hooks", "Vercel"],
-      demoUrl: "https://career.nithinram.me/",
+      demoUrl: "https://careerpath-nav.nithinram.com/",
       githubUrl: "https://github.com/nithinramkalava/CareerPath-Navigator",
       featured: true,
       keyFeatures: [

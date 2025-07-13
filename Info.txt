@@ -228,7 +228,7 @@ Completed secondary education with excellent academic performance.
 
 resume
 Nithin Ram Kalava
-linkedin.com/in/nithinramkalava | github.com/nithinramkalava | hello@nithinram.me |
+linkedin.com/in/nithinramkalava | github.com/nithinramkalava | mail@nithinram.com |
 PROFESSIONAL SUMMARY
 Results-driven Data Scientist and Full-Stack Developer with expertise in machine learning, data
 engineering, and web application development. Demonstrated success in implementing post-quantum

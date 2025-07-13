@@ -1,7 +1,7 @@
 # Hi there, I'm Nithin Ram Kalava! 👋
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/nithinramkalava)
-[![Portfolio](https://img.shields.io/badge/Portfolio-nithinram.me-brightgreen?style=for-the-badge&logo=vercel)](https://nithinram.me) 
+[![Portfolio](https://img.shields.io/badge/Portfolio-nithinram.com-brightgreen?style=for-the-badge&logo=vercel)](https://nithinram.com) 
 [![GitHub](https://img.shields.io/badge/GitHub-Follow_Me-black?style=for-the-badge&logo=github)](https://github.com/nithinramkalava)
 
 ## 👨‍💻 About Me
@@ -89,7 +89,7 @@ An Android app that helps users improve math skills through timed exercises with
 - **Tech:** Java, Android SDK, SQLite
 - **Links:** [Demo APK](https://github.com/nithinramkalava/Math-Minute/releases/tag/debug-releases) | [GitHub](https://github.com/nithinramkalava/Math-Minute)
 
-_(You can find more projects on my portfolio: [nithinram.me](https://nithinram.me))_
+_(You can find more projects on my portfolio: [nithinram.com](https://nithinram.com))_
 
 ## 🎓 Education & Certifications
 
@@ -107,4 +107,4 @@ _(You can find more projects on my portfolio: [nithinram.me](https://nithinram.m
 ## 📫 Connect With Me
 
 - **LinkedIn:** [linkedin.com/in/nithinramkalava](https://linkedin.com/in/nithinramkalava)
-- **Portfolio:** [nithinram.me](https://nithinram.me)
+- **Portfolio:** [nithinram.com](https://nithinram.com)

@@ -25,10 +25,10 @@ export function ContactSection() {
               <div>
                 <h4 className="font-medium">Email</h4>
                 <a 
-                  href="mailto:mail@nithinram.com" 
+                  href="mailto:contact@nithinram.com" 
                   className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
                 >
-                  mail@nithinram.com
+                  contact@nithinram.com
                 </a>
               </div>
             </div>

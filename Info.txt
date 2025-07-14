@@ -7,7 +7,7 @@ A passionate Full Stack Developer and Data Scientist with expertise in building 
 
 ### B.TECH. in COMPUTER SCIENCE
 **Institution:** Vasireddy Venkatadri Institute of Technology (VVIT), GUNTUR, ANDHRA PRADESH
-**Period:** 2021-2025
+**Period:** Dec. 2021 - Jun. 2025
 **GPA:** 8.28/10
 Gained a strong foundation in computer science principles, software engineering practices, and programming skills with a focus on web development, data structures, algorithms, and cryptography.
 
@@ -228,7 +228,7 @@ Completed secondary education with excellent academic performance.
 
 resume
 Nithin Ram Kalava
-linkedin.com/in/nithinramkalava | github.com/nithinramkalava | mail@nithinram.com |
+linkedin.com/in/nithinramkalava | github.com/nithinramkalava | contact@nithinram.com |
 PROFESSIONAL SUMMARY
 Results-driven Data Scientist and Full-Stack Developer with expertise in machine learning, data
 engineering, and web application development. Demonstrated success in implementing post-quantum

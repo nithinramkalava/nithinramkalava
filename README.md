@@ -1,110 +1,92 @@
-# Hi there, I'm Nithin Ram Kalava! 👋
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=10&height=300&section=header&text=Hi,%20I'm%20Nithin%20!!%20👋&fontSize=60&animation=fadeIn&fontAlignY=38&desc={Software%20Development}%20∪%20{Artificial%20Intelligence}&descAlignY=51&descAlign=62)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/nithinramkalava)
-[![Portfolio](https://img.shields.io/badge/Portfolio-nithinram.com-brightgreen?style=for-the-badge&logo=vercel)](https://nithinram.com) 
-[![GitHub](https://img.shields.io/badge/GitHub-Follow_Me-black?style=for-the-badge&logo=github)](https://github.com/nithinramkalava)
+<!-- ![](https://komarev.com/ghpvc/?username=nithinramkalava&label=PROFILE+VIEWS&color=dc143c) -->
 
-## 👨‍💻 About Me
+<h2> <img src="https://cdn.edu.buncee.com/assets/48c9418aae96bd73814084fb7a379840/animation-imagination-speachbubble-0325820.gif" width=32px height=30px> About Me </h2>
 
-I graduated with a B.Tech in Computer Science from Vasireddy Venkatadri Institute of Technology (VVIT) Guntur (Class of 2025) and spend most of my time building software that matters. My work ranges from web applications with clean interfaces to machine learning systems that solve practical problems, and even implementations of next-generation cryptography.
+<img width="45%" align="right" alt="Github" src="https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/47a1a7b035154ce002fffc42e803b6ca8acbc4f3/gifs/git-header.svg" />
 
-My interests lie at the crossroads of **Full-Stack Development**, **Data Science**, and **Post-Quantum Cryptography**. There's something deeply satisfying about transforming complex concepts into working software that's both functional and elegant. I'm constantly learning and pushing my technical boundaries.
 
-- 🔭 Working on making advanced AI models more accessible and practical for everyday use
-- 🌱 Exploring cloud-native architectures and MLOps to improve deployment workflows
-- 👯 Open to collaboration on open-source projects in Data Science, AI, or Web Development
-- 💬 Happy to discuss **React/Next.js, Python, Machine Learning, Cryptography, or Linux**
-- 😄 Outside of tech, I build PCs, watch films, and put together Lego sets
+- � Pronouns: he/him
+- 🎓 Just graduated with a B.Tech in Computer Science from VVIT Guntur (Class of 2025)
+- 🔭 I'm currently working on web applications and machine learning projects
+- 🌱 I'm currently learning cloud-native architectures and MLOps
+- 👯 I'm looking to collaborate on full-stack development and data science projects
+- 🤔 I'm looking for help with landing my first tech role
+- � Ask me about React/Next.js, Python, Machine Learning, Web Development, or Linux
+- ⚡ Fun fact: I build PCs, watch films, and put together Lego sets in my free time
 
-## 🛠️ Tech Stack
+<!-- Languages -->
 
-Tools and technologies I work with regularly:
+<h2> <img src = "https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/code.gif" width = 32px height=30px> Languages </h2>
+<a href= https://www.python.org/> <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/python.svg'> </a>
+<a href= https://github.com/?tab=repositories&q=&type=&language=javascript&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/javascript.svg'> </a>
+<a href= https://github.com/?tab=repositories&q=&type=&language=typescript&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/typescript.svg'> </a>
+<a href= https://github.com/?tab=repositories&q=&type=&language=java&sort= > <img width ='32px' height='32px' src ='https://www.svgrepo.com/show/303388/java-4-logo.svg'> </a>
+<a href= https://github.com/?tab=repositories&q=&type=&language=c&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/c.svg'> </a>
+<a href= https://github.com/?tab=repositories&q=&type=&language=html&sort= > <img width ='32px' height='32px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/2048px-HTML5_Badge.svg.png'> </a>
+<a href= https://github.com/?tab=repositories&q=&type=&language=sql&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/postgresql.svg'> </a>
 
-**Core Languages:**
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-025E8C?style=flat-square&logo=postgresql&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=white)
+<!-- Tools -->
 
-**Frontend Development:**
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-_(Also: Framer Motion, Responsive Design, Accessibility)_
+<h2> <img src = "https://media.baamboozle.com/uploads/images/486794/1632048628_42571.gif" width = 32px height=30px> Tools </h2>
 
-**Backend Development & APIs:**
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
-_(Also: REST API Design, PL/pgSQL, MySQL, Firebase, Basic GraphQL understanding)_
+<img width="45%" align="right" alt="Github" src="./assets/llustration Header.gif" />
 
-**AI, Machine Learning & Data:**
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=flat-square&logo=tableau&logoColor=white)
-_(Also: LLM Integration (Ollama), Data Pipelines (ETL), Deep Learning, NLP, Data Visualization, Vertex AI)_
+- <h3>Frontend & Frameworks</h3>
+  <a href= https://reactjs.org/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png'> </a>
+  <a href= https://nextjs.org/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png'> </a>
+  <a href= https://tailwindcss.com/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png'> </a>
+  <a href= https://nodejs.org/> <img width ='62px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png'> </a>
 
-**Cloud, DevOps & Tools:**
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-_(Also: Vercel (CI/CD), NPM, Jupyter Notebooks, MLOps Concepts)_
+- <h3>Data Science & ML</h3>
+  <a href= https://www.tensorflow.org/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/957px-Tensorflow_logo.svg.png'> </a>
+  <a href= https://pytorch.org/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/PyTorch_logo_icon.svg/1200px-PyTorch_logo_icon.svg.png'> </a>
+  <a href= https://pandas.pydata.org/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Pandas_mark.svg/1200px-Pandas_mark.svg.png'> </a>
+  <a href= https://scikit-learn.org/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/2560px-Scikit_learn_logo_small.svg.png'> </a>
 
-**Specialized Areas:**
-![Cryptography](https://img.shields.io/badge/PQC-Secure-blueviolet?style=flat-square) <!-- Generic badge -->
-![Android](https://img.shields.io/badge/Android_Dev-3DDC84?style=flat-square&logo=android&logoColor=white)
-_(Post-Quantum Cryptography (NIST Standards), Algorithm Optimization)_
+- <h3>Databases & Cloud</h3>
+  <a href= https://www.postgresql.org/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png'> </a>
+  <a href= https://www.mongodb.com/> <img width ='42px' height='42px' src ='https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg'> </a>
+  <a href= https://aws.amazon.com/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png'> </a>
+  <a href= https://cloud.google.com/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Google-cloud-platform.svg/2048px-Google-cloud-platform.svg.png'> </a>
 
-## 🚀 Some Things I've Built
+- <h3>Development Tools</h3>
+  <a href= https://git-scm.com/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1200px-Git_icon.svg.png'> </a>
+  <a href= https://www.docker.com/> <img width ='42px' height='42px' src ='https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png'> </a>
+  <a href= https://vercel.com/> <img width ='42px' height='42px' src ='https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png'> </a>
+  <a href= https://code.visualstudio.com/> <img width ='42px' height='42px' src ='https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png'> </a>
 
-Here are a few projects I'm particularly proud of. Most of them are hosted live – feel free to check them out!
+## 🚀 Some Cool Projects I've Built
+
+Here are a few projects I'm pretty proud of! Most of them are live, so feel free to check them out:
 
 ### 1. PC Building Assistant
-A platform that streamlines PC component selection using machine learning for component ranking and enforcing compatibility through a PostgreSQL database. Features both a conversational interface powered by an LLM and a traditional builder UI.
+Built this because I love building PCs and wanted to help others do the same. It uses ML to rank components and has a database to make sure everything's compatible. Plus there's a chat feature powered by an LLM!
 - **Tech:** Python, Next.js/React, PostgreSQL, TypeScript, Ollama, Pandas
 - **Links:** [Live Demo](https://pcbuilder-ai.vercel.app/) | [GitHub](https://github.com/nithinramkalava/build-your-pc)
 
-### 2. Post-Quantum Cryptography Library ('pqc')
-A JavaScript implementation of NIST's post-quantum cryptographic standards (ML-KEM, ML-DSA, SLH-DSA) with 1029+ downloads on NPM. Complemented by PQC-Vizz, an interactive tool that visualizes these algorithms.
-- **Tech:** JavaScript (ESM), NPM, Next.js, React, Algorithms
-- **Links:** [PQC-Vizz Demo](https://pqc-vizz.vercel.app/) | ['pqc' NPM Package](https://www.npmjs.com/package/pqc) | [GitHub (pqc-vizz)](https://github.com/nithinramkalava/pqc-vizz)
-
-### 3. CareerPath Navigator
-A web application for rural students that provides career guidance through interactive pathway visualizations. Optimized for performance in low-bandwidth environments.
+### 2. CareerPath Navigator
+This one's close to my heart - helps rural students figure out career paths through interactive visualizations. Made sure it works well even on slower internet connections.
 - **Tech:** TypeScript, Next.js, React, Tailwind CSS, Framer Motion
 - **Links:** [Live Demo](https://careerpath-nav.vercel.app/) | [GitHub](https://github.com/nithinramkalava/CareerPath-Navigator)
 
-### 4. Math Minute
-An Android app that helps users improve math skills through timed exercises with adaptive difficulty levels. Uses SQLite for local data storage.
+### 3. Math Minute
+An Android app I built to help people get better at math through timed exercises. The difficulty adapts based on how you're doing.
 - **Tech:** Java, Android SDK, SQLite
 - **Links:** [Demo APK](https://github.com/nithinramkalava/Math-Minute/releases/tag/debug-releases) | [GitHub](https://github.com/nithinramkalava/Math-Minute)
 
-_(You can find more projects on my portfolio: [nithinram.com](https://nithinram.com))_
+_(Want to see more? Check out my portfolio: [nithinram.com](https://nithinram.com))_
 
-## 🎓 Education & Certifications
+<h2> <img src='https://octodex.github.com/images/daftpunktocat-guy.gif' width='40px' height=32px> GitHub Stats </h2>
 
-- **B.Tech in Computer Science & Engineering** - VVIT, Guntur (CGPA: 8.28)
-- **Professional Certifications**: 
-  - Deep Learning & Machine Learning (DeepLearning.AI)
-  - Data Science (IBM)
-  - Advanced Data Analytics & AI (Google)
-  - AWS Academy Graduate (Cloud Foundations, Architecting, ML & Data Engineering) 
-  - Google Cloud (30+ Skill Badges in Vertex AI, GenAI development)
-  - Web Development (Meta, freeCodeCamp)
-  
-  See the full list on my [LinkedIn](https://linkedin.com/in/nithinramkalava/details/certifications/).
+![Nithin's Stats](https://github-readme-stats.vercel.app/api?username=nithinramkalava&theme=dracula&show_icons=true&hide_border=true&count_private=true&bg_color=DEG,5A2B7A,9D1B27,A57434&title_color=FFFFFF&text_color=FFFFFF&border_color=000000&layout=compact&include_all_commits=true&line_height=20&card_width=350)
+![Nithin's top langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nithinramkalava&hide=Roff&bg_color=DEG,5A2B7A,9D1B27,A57434&title_color=FFFFFF&text_color=FFFFFF&border_color=000000&layout=compact&include_all_commits=true&count_private=true&card_width=350)
 
-## 📫 Connect With Me
+<h2> <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="50px" height=30px> Connect with me </h2>
 
-- **LinkedIn:** [linkedin.com/in/nithinramkalava](https://linkedin.com/in/nithinramkalava)
-- **Portfolio:** [nithinram.com](https://nithinram.com)
+<a href="https://linkedin.com/in/nithinramkalava"> <img width='42px' height='42px' src='https://cdn-icons-png.flaticon.com/512/174/174857.png'> </a>
+<a href="https://nithinram.com"> <img width='42px' height='42px' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png'> </a>
+<a href="mailto:contact@nithinram.com"> <img width='52px' height='42px' src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png'> </a>
+<a href="https://www.instagram.com/nithinramkalava/"> <img width='42px' height='42px' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png'> </a>
+<a href="https://twitter.com/nithinramkalava"> <img width='42px' height='42px' src='https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png'> </a>

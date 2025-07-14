@@ -87,10 +87,10 @@ export function Footer() {
             <ul className="space-y-2 text-[var(--muted-foreground)]">
               <li>
                 <a 
-                  href="mailto:mail@nithinram.com"
+                  href="mailto:contact@nithinram.com"
                   className="hover:text-[var(--primary)] transition-colors"
                 >
-                  mail@nithinram.com
+                  contact@nithinram.com
                 </a>
               </li>
             </ul>

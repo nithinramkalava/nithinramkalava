@@ -86,7 +86,6 @@ _(Want to see more? Check out my portfolio: [nithinram.com](https://nithinram.co
 <h2> <img src='https://raw.githubusercontent.com/rahulbanerjee26/githubProfileReadmeGenerator/main/gifs/handShake.gif' width="50px" height=30px> Connect with me </h2>
 
 <a href="https://linkedin.com/in/nithinramkalava"> <img width='42px' height='42px' src='https://cdn-icons-png.flaticon.com/512/174/174857.png'> </a>
-<a href="https://nithinram.com"> <img width='42px' height='42px' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/2048px-Octicons-mark-github.svg.png'> </a>
 <a href="mailto:contact@nithinram.com"> <img width='52px' height='42px' src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Gmail_icon_%282020%29.svg/2560px-Gmail_icon_%282020%29.svg.png'> </a>
 <a href="https://www.instagram.com/nithinramkalava/"> <img width='42px' height='42px' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png'> </a>
 <a href="https://twitter.com/nithinramkalava"> <img width='42px' height='42px' src='https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png'> </a>

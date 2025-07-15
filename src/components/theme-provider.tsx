@@ -21,7 +21,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       // If no stored theme, use system preference as initial theme
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
+        ? "light" // force light mode for consistency
         : "light";
       setTheme(systemTheme);
     }

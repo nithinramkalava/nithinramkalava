@@ -75,7 +75,7 @@ export function Navbar() {
               </a>
             ))}
             <div className="flex items-center space-x-4">
-              <a href="/files/Nithin_Ram_s_Resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer">
                 <Button variant="primary" size="sm">
                   Resume
                 </Button>
@@ -131,7 +131,7 @@ export function Navbar() {
                   {item.name}
                 </a>
               ))}
-              <a href="/files/Nithin_Ram_s_Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
+              <a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="primary" size="sm">
                   Resume
                 </Button>

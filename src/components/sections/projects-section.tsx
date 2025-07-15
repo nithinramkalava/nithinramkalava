@@ -134,50 +134,70 @@ export function ProjectsSection() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {allProjects.map((project, index) => (
-          <Card 
-            key={index} 
-            className="flex flex-col h-full border border-[var(--border)] hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
-            onMouseEnter={() => setHoveredProject(index)}
-            onMouseLeave={() => setHoveredProject(null)}
+          <div
+            key={index}
+            className="cursor-pointer"
+            onClick={() => {
+              if (project.demoUrl) {
+                window.open(project.demoUrl, '_blank');
+              } else if (project.githubUrl) {
+                window.open(project.githubUrl, '_blank');
+              }
+            }}
           >
-            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-[var(--secondary)] to-[var(--primary)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-right"></div>
-            
-            <div className="relative h-64 w-full overflow-hidden">
-              {project.featured && (
-                <div className="absolute top-2 right-2 z-10">
-                  <Badge variant="secondary">Featured</Badge>
-                </div>
-              )}
-              <div className="h-full w-full relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="absolute inset-0 w-full h-full object-contain object-center"
-                  loading="lazy"
-                  onError={(e) => {
-                    console.error(`Failed to load image: ${project.image}`);
-                    e.currentTarget.src = "/images/placeholder-project.png";
-                  }}
-                />
-                {hoveredProject === index && (
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-start p-4">
-                    <div className="flex gap-2">
-                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                        <Badge key={techIndex} variant="primary" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <Badge variant="outline" className="text-xs text-white border-white">
-                          +{project.technologies.length - 3}
-                        </Badge>
-                      )}
-                    </div>
+            <Card 
+              className="flex flex-col h-full border border-[var(--border)] hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
+              onMouseEnter={() => setHoveredProject(index)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-[var(--secondary)] to-[var(--primary)] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-right"></div>
+              
+              <div className="relative h-64 w-full overflow-hidden">
+                {project.featured && (
+                  <div className="absolute top-2 right-2 z-10">
+                    <Badge variant="secondary">Featured</Badge>
                   </div>
                 )}
+                <div className="h-full w-full relative overflow-hidden group-hover:scale-105 transition-transform duration-500">
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="absolute inset-0 w-full h-full object-contain object-center"
+                    loading="lazy"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${project.image}`);
+                      e.currentTarget.src = "/images/placeholder-project.png";
+                    }}
+                  />
+                  {hoveredProject === index && (
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                      <div className="text-center text-white">
+                        <div className="text-lg font-semibold mb-2">
+                          {project.demoUrl ? (
+                            project.title === "Post-Quantum Cryptography Implementation" ? "Click to visit NPM package" :
+                            project.title === "London Bus Safety Analysis" ? "Click to view Tableau dashboard" :
+                            project.title === "Math Minute" ? "Click to download APK" :
+                            "Click to view live demo"
+                          ) : "Click to view on NPM"}
+                        </div>
+                        <div className="flex gap-2 justify-center">
+                          {project.technologies.slice(0, 3).map((tech, techIndex) => (
+                            <Badge key={techIndex} variant="primary" className="text-xs">
+                              {tech}
+                            </Badge>
+                          ))}
+                          {project.technologies.length > 3 && (
+                            <Badge variant="outline" className="text-xs text-white border-white">
+                              +{project.technologies.length - 3}
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
             
             <CardHeader>
               <CardTitle>{project.title}</CardTitle>
@@ -211,14 +231,26 @@ export function ProjectsSection() {
             <CardFooter className="pt-4 border-t border-[var(--border)]">
               <div className="flex gap-2 w-full">
                 {project.demoUrl && (
-                  <Link href={project.demoUrl} className="flex-1" target="_blank" rel="noopener noreferrer">
+                  <Link 
+                    href={project.demoUrl} 
+                    className="flex-1" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <Button variant="primary" size="sm" fullWidth>
                       View Demo
                     </Button>
                   </Link>
                 )}
                 {project.githubUrl && (
-                  <Link href={project.githubUrl} className="flex-1" target="_blank" rel="noopener noreferrer">
+                  <Link 
+                    href={project.githubUrl} 
+                    className="flex-1" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <Button variant={project.demoUrl ? "outline" : "primary"} size="sm" fullWidth>
                       {project.title === "Post-Quantum Cryptography Implementation" ? "NPM Package" : "GitHub"}
                     </Button>
@@ -227,6 +259,7 @@ export function ProjectsSection() {
               </div>
             </CardFooter>
           </Card>
+        </div>
         ))}
       </div>
     </Section>

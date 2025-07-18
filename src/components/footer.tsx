@@ -11,6 +11,7 @@ export function Footer() {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Resume', href: '/files/Resume.pdf' },
   ];
   
   const socialLinks = [
@@ -69,12 +70,23 @@ export function Footer() {
             <ul className="space-y-2">
               {links.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    href={link.href}
-                    className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
-                  >
-                    {link.name}
-                  </Link>
+                  {link.name === 'Resume' ? (
+                    <a 
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link 
+                      href={link.href}
+                      className="text-[var(--muted-foreground)] hover:text-[var(--primary)] transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

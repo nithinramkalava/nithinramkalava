@@ -91,31 +91,6 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          
-          <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider mb-4">
-              Contact
-            </h3>
-            <ul className="space-y-2 text-[var(--muted-foreground)]">
-              <li>
-                <a 
-                  href="mailto:contact@nithinram.com"
-                  className="hover:text-[var(--primary)] transition-colors"
-                >
-                  contact@nithinram.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div className="border-t border-[var(--border)] mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-[var(--muted-foreground)] text-sm">
-            © {currentYear} Nithin Ram Kalava. Crafted by hand, not by AI.
-          </p>
-          <p className="text-[var(--muted-foreground)] text-sm mt-4 md:mt-0">
-            Built with <span className="text-[var(--primary)]">❤</span> using Next.js, TypeScript & many cups of coffee
-          </p>
         </div>
       </div>
     </footer>

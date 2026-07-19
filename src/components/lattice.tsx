@@ -128,10 +128,25 @@ export function Lattice() {
       offy += dvy * dt;
       let u = inv00 * offx + inv01 * offy,
         v = inv10 * offx + inv11 * offy;
-      u -= Math.round(u);
-      v -= Math.round(v);
+      const ru = Math.round(u),
+        rv = Math.round(v);
+      u -= ru;
+      v -= rv;
       offx = b1x * u + b2x * v;
       offy = b1y * u + b2y * v;
+      // When the drift wraps by a whole cell, shift the walker + trail by the
+      // same integer so they stay anchored in screen space instead of snapping
+      // sideways (the grid itself wraps invisibly because a lattice repeats).
+      if (ru || rv) {
+        wci += ru;
+        wni += ru;
+        wcj += rv;
+        wnj += rv;
+        for (let k = 0; k < trail.length; k += 2) {
+          trail[k] += ru;
+          trail[k + 1] += rv;
+        }
+      }
 
       const cx = W * 0.62,
         cy = H * 0.5,

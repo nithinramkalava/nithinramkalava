@@ -49,4 +49,4 @@
 <a href="https://vercel.com/"><img width="42" height="42" src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"></a>
 <a href="https://code.visualstudio.com/"><img width="42" height="42" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"></a>
 
-> **Note:** The remainder of your README (projects, stats, and social links) is unchanged from your original. This file only updates the broken Wikimedia-hosted icons with more reliable Devicon/VectorLogoZone sources.
+

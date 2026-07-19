@@ -66,7 +66,7 @@ export function Lattice() {
       inv10 = -b1y / det,
       inv11 = b1x / det;
     const DA = (214 * Math.PI) / 180,
-      SPD = 8;
+      SPD = 13;
     const dvx = Math.cos(DA) * SPD,
       dvy = Math.sin(DA) * SPD;
     const N = 13;
@@ -139,7 +139,7 @@ export function Lattice() {
         oy = cy + offy;
       const fx = W * 0.6,
         fy = H * 0.48,
-        fade = Math.max(W, H) * 0.62;
+        fade = Math.max(W, H) * 0.74;
       const tx = cur.on ? cur.x : fx,
         tyv = cur.on ? cur.y : fy,
         Rs = 160;
@@ -175,11 +175,11 @@ export function Lattice() {
             py = oy + i * b1y + j * b2y;
           const df = Math.hypot(px - fx, py - fy),
             a = Math.max(0, 1 - df / fade);
-          if (a > 0.03) {
-            ctx.globalAlpha = a * a;
+          if (a > 0.02) {
+            ctx.globalAlpha = a;
             ctx.fillStyle = col.dot;
             ctx.beginPath();
-            ctx.arc(px, py, 1.7, 0, 6.283);
+            ctx.arc(px, py, 2.1, 0, 6.283);
             ctx.fill();
           }
         }
@@ -192,10 +192,10 @@ export function Lattice() {
             qy = oy + i * b1y + j * b2y;
           const dc = Math.hypot(qx - tx, qy - tyv);
           if (dc > Rs) continue;
-          ctx.globalAlpha = (1 - dc / Rs) * 0.55;
+          ctx.globalAlpha = (1 - dc / Rs) * 0.72;
           ctx.fillStyle = col.acc;
           ctx.beginPath();
-          ctx.arc(qx, qy, 1.9, 0, 6.283);
+          ctx.arc(qx, qy, 2.3, 0, 6.283);
           ctx.fill();
         }
       ctx.globalAlpha = 1;
@@ -214,13 +214,13 @@ export function Lattice() {
       trail.push(li, lj);
       if (trail.length > 140) trail.splice(0, 2);
       ctx.strokeStyle = col.acc;
-      ctx.lineWidth = 1.5;
+      ctx.lineWidth = 1.9;
       for (let k = 2; k < trail.length; k += 2) {
         const ax = ox + trail[k - 2] * b1x + trail[k - 1] * b2x,
           ay = oy + trail[k - 2] * b1y + trail[k - 1] * b2y;
         const bx = ox + trail[k] * b1x + trail[k + 1] * b2x,
           by = oy + trail[k] * b1y + trail[k + 1] * b2y;
-        ctx.globalAlpha = (k / trail.length) * 0.3;
+        ctx.globalAlpha = (k / trail.length) * 0.45;
         ctx.beginPath();
         ctx.moveTo(ax, ay);
         ctx.lineTo(bx, by);
@@ -235,7 +235,7 @@ export function Lattice() {
       ctx.fillStyle = col.acc;
       ctx.globalAlpha = 0.95;
       ctx.beginPath();
-      ctx.arc(wx, wy, 2.7, 0, 6.283);
+      ctx.arc(wx, wy, 3.2, 0, 6.283);
       ctx.fill();
       ctx.restore();
       ctx.globalAlpha = 1;

@@ -27,7 +27,7 @@ export function Navbar() {
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
       <div className="wrap nav-in">
         <a className="brand" href="#top">
-          <span className="glyph">N</span>nithin ram kalava
+          <span className="glyph">N</span>Nithin
         </a>
         <div className={`nav-links ${open ? "open" : ""}`} onClick={() => setOpen(false)}>
           {LINKS.map((l) => (

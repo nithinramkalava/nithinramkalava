@@ -21,8 +21,8 @@ export const profile = {
   ],
 
   about: [
-    "I studied computer science and joined SecureMachines right after. Most of what I know I learned by building things and taking them apart: web apps, data pipelines, a cryptography library, and now the cloud infrastructure behind hardware security modules.",
-    "I like problems that sit close to the hardware, where a small mistake is the difference between secure and not. I'm comfortable moving between a Linux box, a cloud console and a Java stack in the same afternoon, and I care about making complicated systems simple enough for other people to actually use.",
+    "I studied computer science and joined SecureMachines right after. Most of what I know I learned by building things and taking them apart: web apps, data pipelines, a machine-learning project, a cryptography library, and now the cloud infrastructure behind hardware security modules.",
+    "I'm not tied to one stack or one domain. I move across web, data, machine learning, cryptography and low-level systems, and I pick up new tools quickly, so I can slot into most kinds of software work. What I enjoy most are the problems close to the hardware, where a small mistake is the difference between secure and not, and I like making complicated systems simple enough for other people to actually use.",
     "Outside of work I build PCs, run a small home lab, tinker with Linux, throw darts, and watch far too many films. I recently moved to Bengaluru for this job, and I'm slowly learning Kannada.",
   ],
 

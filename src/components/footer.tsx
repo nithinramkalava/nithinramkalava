@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="footer">
       <div className="wrap footer-in">
         <span className="fname">{profile.name}</span>
-        <span className="fmeta">Software Engineer · SecureMachines</span>
+        <span className="fmeta">Software Engineer</span>
         <div className="socials">
           {socials.map((s) => (
             <a

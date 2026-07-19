@@ -1,145 +1,64 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Button } from './ui/button';
-import { ThemeToggle } from './theme-toggle';
+import { useEffect, useState } from "react";
+import { ThemeToggle } from "./theme-toggle";
+import { profile } from "@/lib/data/profile";
 
-interface NavItem {
-  name: string;
-  href: string;
-}
-
-const navItems: NavItem[] = [
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience & Certifications', href: '#certifications' },
-  { name: 'Contact', href: '#contact' },
+const LINKS = [
+  { href: "#work", label: "work" },
+  { href: "#experience", label: "experience" },
+  { href: "#skills", label: "skills" },
+  { href: "#about", label: "about" },
+  { href: "#contact", label: "contact" },
 ];
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      const element = document.getElementById(href.substring(1));
-      if (element) {
-        window.scrollTo({
-          top: element.offsetTop - 100,
-          behavior: 'smooth',
-        });
-      }
-      if (isMenuOpen) {
-        setIsMenuOpen(false);
-      }
-    }
-  };
-
   return (
-    <header
-      className={`
-        fixed top-0 left-0 right-0 z-50 transition-all duration-300
-        ${isScrolled ? 'bg-[var(--background)]/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'}
-      `}
-    >
-      <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center">
-            <Link href="/" className="text-xl font-bold">
-              Nithin <span className="text-[var(--primary)]">Ram</span>
-            </Link>
-          </div>
-
-          {/* Desktop navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-sm font-medium hover:text-[var(--primary)] transition-colors"
-                onClick={(e) => handleNavClick(e, item.href)}
-              >
-                {item.name}
-              </a>
-            ))}
-            <div className="flex items-center space-x-4">
-              <a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer">
-                <Button variant="primary" size="sm">
-                  Resume
-                </Button>
-              </a>
-              <ThemeToggle />
-            </div>
-          </nav>
-
-          {/* Mobile view - Theme toggle and menu button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                {isMenuOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                  />
-                )}
-              </svg>
-            </button>
-            <ThemeToggle />
-          </div>
+    <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
+      <div className="wrap nav-in">
+        <a className="brand" href="#top">
+          <span className="glyph">N</span>nithin ram kalava
+        </a>
+        <div className={`nav-links ${open ? "open" : ""}`} onClick={() => setOpen(false)}>
+          {LINKS.map((l) => (
+            <a key={l.href} href={l.href}>
+              {l.label}
+            </a>
+          ))}
+          <a className="rez" href={profile.resumeUrl} target="_blank" rel="noopener noreferrer">
+            résumé
+          </a>
         </div>
-
-        {/* Mobile navigation menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-[var(--border)]">
-            <nav className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-sm font-medium hover:text-[var(--primary)] transition-colors"
-                  onClick={(e) => handleNavClick(e, item.href)}
-                >
-                  {item.name}
-                </a>
-              ))}
-              <a href="/files/Resume.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
-                <Button variant="primary" size="sm">
-                  Resume
-                </Button>
-              </a>
-            </nav>
-          </div>
-        )}
+        <div className="nav-right">
+          <ThemeToggle />
+          <button
+            className="nav-burger"
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.7}>
+                <path d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.7}>
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
-    </header>
+    </nav>
   );
-} 
+}

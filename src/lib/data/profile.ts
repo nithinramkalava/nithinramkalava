@@ -42,5 +42,5 @@ export const profile = {
 export const socials: SocialLink[] = [
   { label: "Email", href: "mailto:nithin@nithinram.com", handle: "nithin@nithinram.com" },
   { label: "GitHub", href: "https://github.com/nithinramkalava", handle: "github.com/nithinramkalava" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/nithinramkalava", handle: "in/nithinramkalava" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/nithinkalava", handle: "in/nithinramkalava" },
 ];
